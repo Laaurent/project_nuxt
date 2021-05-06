@@ -33,3 +33,13 @@ label{
     text-align: center;
     color: $gray;
 }
+
+button , input[type=submit]{
+    font-weight: 800;
+    margin: 40px 0px 16px 0px;
+    padding: 0.5em;
+    background-color: $primary;
+    color: $white;
+    border-radius: 0.5em;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
