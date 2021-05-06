@@ -1,0 +1,164 @@
+{
+  "users": [
+    {
+      "email": "toto@example.com",
+      "password": "$2a$10$dXNszRnkYBxyRPwYHgIfxeOD0/IBDbkI2aXpj1qXrMwvoVKPXa1Vq",
+      "id": 1
+    },
+    {
+      "email": "louis@narah.io",
+      "password": "$2a$10$v0jkOi/aWgRCqy8CyQ7GU.MMBDXE2HWZtIByR9glCw9SfMV5vp2kq",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$FEzQOpyzd6sNxBU05NaWOuKuwu2ZxFeB3n0iLVwON7AwsACBgwn.S",
+      "id": 3
+    },
+    {
+      "email": "toto@gmail.com",
+      "password": "$2a$10$e/W.8lOkX9mwydK.XcDJOu8f2mv5MWlI4rISDJ0DqPRVufnoNU5va",
+      "firstname": "louis",
+      "lastname": "harang",
+      "id": 4
+    },
+    {
+      "email": "qzdqzzqd@gmail.com",
+      "password": "$2a$10$jyxLSUpYvndAQZ.AONsvxujCVFwnA/Mu3CUP1WCJ2p2PsA5J20XXW",
+      "firstname": "qdqzdzq",
+      "lastname": "qzdzdq",
+      "id": 5
+    },
+    {
+      "email": "qdqzdqzd@gmail.com",
+      "password": "$2a$10$pF1M3TQqME.vwcDorQWNIujtG31yx6ZpwExZ5uR0i.3ogfIwA35ua",
+      "firstname": "qdqzdq",
+      "lastname": "qzdqzd",
+      "id": 6
+    },
+    {
+      "email": "qzdqqz@gmail.com",
+      "password": "$2a$10$DKFeGxRnahYPul1GoKQslOHywSZq3ywtcV54VQazgSZUt5jgQ0mMa",
+      "firstname": "qzdqzd",
+      "lastname": "qzdzq",
+      "id": 7
+    },
+    {
+      "email": "admin2@gmail.com",
+      "password": "$2a$10$v4vUb8M0Igq4Xm/aX.RALOAv.BN0v3NIfp.SiDngdyLqIEnWC8AYK",
+      "id": 8
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$XdDsGlhMb1Ypb1YIWLQRxuYXrnqd1Fl8PpRZlEHVd55N.Dc0xjwRG",
+      "id": 9
+    }
+  ],
+  "news": [
+    {
+      "title": "News",
+      "published": "12/09/2020",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "rock"
+    },
+    {
+      "id": 2,
+      "name": "metal"
+    },
+    {
+      "id": 3,
+      "name": "rap"
+    },
+    {
+      "id": 4,
+      "name": "classical"
+    },
+    {
+      "id": 5,
+      "name": "electro"
+    },
+    {
+      "id": 6,
+      "name": "rnb"
+    },
+    {
+      "id": 7,
+      "name": "alternative"
+    },
+    {
+      "id": 8,
+      "name": "jazz"
+    }
+  ],
+  "artists": [
+    {
+      "id": 1,
+      "name": "Coldplay",
+      "country": "Great Britain",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/1/1d/Coldplay_shot_by_Marcus_Haney_01.png",
+      "genreId": 1,
+      "likes": 100310,
+      "description": "Il est formé par l'auteur-compositeur-interprète Chris Martin et le guitariste Jon Buckland. Le bassiste Guy Berryman rejoint ensuite le groupe, avant que le batteur Will Champion ne vienne compléter le quatuor."
+    },
+    {
+      "id": 2,
+      "name": "Tom misch",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tom_Misch%2C_The_Novo%2C_April_2018_%28cropped%29.jpg/800px-Tom_Misch%2C_The_Novo%2C_April_2018_%28cropped%29.jpg",
+      "origin": "Great Britan",
+      "genreId": 8,
+      "likes": 1024,
+      "description": "Thomas Abraham Misch (born 25 June 1995) is an English musician and producer. He began releasing music on SoundCloud in 2012 and released his debut studio album Geography in 2018"
+    },
+    {
+      "id": 3,
+      "name": "Damso",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Festival_des_Vieilles_Charrues_2018_-_Damso_-_006.jpg/800px-Festival_des_Vieilles_Charrues_2018_-_Damso_-_006.jpg",
+      "origin": "Belgique",
+      "genreId": 3,
+      "likes": 20420,
+      "description": "Damso, de son vrai nom William Kalubi Mwamba, né le 10 mai 1992 à Kinshasa (Zaïre, actuelle République démocratique du Congo), est un rappeur et auteur-compositeur-interprète belgo-congolais."
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "name": "QALF",
+      "released": 2020,
+      "tracks": 15,
+      "artistId": 3
+    },
+    {
+      "id": 2,
+      "name": "Geography",
+      "released": 2018,
+      "tracks": 13,
+      "artistId": 2
+    }
+  ],
+  "concerts": [
+    {
+      "id": 1,
+      "name": "Paris Bercy",
+      "date": "10/12/2019",
+      "artistId": 3
+    },
+    {
+      "id": 2,
+      "name": "Olympia",
+      "date": "10/12/2018",
+      "artistId": 3
+    },
+    {
+      "id": 1,
+      "name": "O2 Academy Manchester",
+      "date": "10/12/2018",
+      "artistId": 2
+    }
+  ]
+}
