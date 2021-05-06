@@ -53,6 +53,11 @@
       "email": "olivier@mail.com",
       "password": "$2a$10$XdDsGlhMb1Ypb1YIWLQRxuYXrnqd1Fl8PpRZlEHVd55N.Dc0xjwRG",
       "id": 9
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$OFVkeFEBrAMoqBdYYIoTaOs04q.hIyTV/iSH42IzVcJCqp2vkvloS",
+      "id": 10
     }
   ],
   "news": [
