@@ -18,6 +18,8 @@ export default {
     return {
       artists: [],
       genres: [],
+      albums: [],
+      concerts: []
     }
   },
   components: {
@@ -29,31 +31,51 @@ export default {
     this.getArtists()
       .then(a => {
         tmpArtists = a;
-        this.getGenres()
-          .then(g => {
-            this.genres = g;
-            this.setGenres(tmpArtists);
-            this.artists = tmpArtists;
-        });
-    });
+        this.getGenres().then(() => this.setGenres(tmpArtists));
+        this.getAlbums().then(() => this.setAlbums(tmpArtists));
+        this.getConcerts().then(() => this.setConcerts(tmpArtists));
+      })
+      .then(() => this.artists = tmpArtists);
   },
   methods: {
+    // GETTERS
     getArtists(){
       return axios.get('http://localhost:3000/artists')
-        .then(a => a.data)
+        .then(a => this.artists = a.data)
         .catch(err => console.error('failed to get artists\n',err))
     },
     getGenres(){
       return axios.get('http://localhost:3000/genres')
-        .then(g => g.data)
+        .then(g => this.genres = g.data)
         .catch(err => console.error('Failed to get genres\n',err))
     },
+    getAlbums(){
+      return axios.get('http://localhost:3000/albums')
+        .then(a => this.albums = a.data)
+        .catch(err => console.error('Failed to get albums\n',err))
+    },
+    getConcerts(){
+      return axios.get('http://localhost:3000/concerts')
+        .then(c => this.concerts = c.data)
+        .catch(err => console.error('Failed to get concerts\n',err))
+    },
+
+    // SETTERS
     setGenres(tmpArtists){
       tmpArtists.forEach(a => {
         a.genre = this.genres.find(g => g.id === a.genreId).name;
       });
+    },
+    setAlbums(tmpArtists){
+      tmpArtists.forEach(artist => {
+        artist.albums = this.albums.filter(album => album.artistId === artist.id);
+      });
+    },
+    setConcerts(tmpArtists){
+      tmpArtists.forEach(artist => {
+        artist.concerts = this.concerts.filter(concert => concert.artistId === artist.id);
+      });
     }
-
   }
 }
 </script>
