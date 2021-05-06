@@ -8,8 +8,8 @@
       </ul>
       <ul>
         <template v-if="!isLogged">
-          <li>Se connecter</li>
-          <li>S'inscrire</li>
+          <li><NuxtLink to="/login">Se connecter</NuxtLink></li>
+          <li><NuxtLink to="/register">S'inscrire</NuxtLink></li>
         </template>
         <template v-else>
           <li>IMG</li>
