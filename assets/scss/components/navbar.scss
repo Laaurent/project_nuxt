@@ -1,6 +1,8 @@
 .navbar_wrapper {
-  background-color: red;
+  position: absolute;
+  background-color: $white;
   padding: 8px 160px;
+  width: 100%;
 
   .navbar_container {
     // display flex
@@ -19,8 +21,20 @@
       display: flex;
 
       li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100px;
         list-style: none;
         margin: 0px 16px;
+      }
+      li.isActive::after{
+        content: "";
+        width: 16px;
+        height: 4px;
+        background-color: $primary;
+        border-radius: 0.5em;
       }
     }
   }

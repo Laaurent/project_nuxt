@@ -1,27 +1,36 @@
 <template>
   <div>
-    <!-- FORMULAIRE -->
-    <form action="" @submit.prevent="login">
-      <label for="id">Identifiant</label>
-      <input
-        v-model="user.email"
-        type="text"
-        name="id"
-        id="id"
-        placeholder=" - "
-      />
+    <div class="wrapper">
+      <div></div>
+      <!-- FORMULAIRE -->
+      <div class="form">
+        <div class="form_item">
+          <h1>Connectez vous !</h1>
+          <form action="" @submit.prevent="login">
+            <input
+              v-model="user.email"
+              type="mail"
+              name="id"
+              id="id"
+              placeholder="Entrez votre email "
+            />
 
-      <label for="password">Mot de passe</label>
-      <input
-        v-model="user.password"
-        type="password"
-        name="password"
-        id="password"
-        placeholder=" - "
-      />
+            <input
+              v-model="user.password"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Entrez votre mot de passe "
+            />
 
-      <input type="submit" value="Se connecter" />
-    </form>
+            <input type="submit" value="Se connecter" />
+            <NuxtLink class="form_link" to="/register"
+              >Vous ne possedez pas de compte ?</NuxtLink
+            >
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,6 +38,7 @@
 import axios from "axios";
 
 export default {
+  layout: "pageOnly",
   data() {
     return {
       user: {
@@ -50,7 +60,3 @@ export default {
   },
 };
 </script>
-
-<style>
-  @import "@/assets/scss/components/form.scss";
-</style>
