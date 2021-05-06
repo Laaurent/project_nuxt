@@ -3,13 +3,14 @@
     <div class="navbar_container">
       <ul>
         <li>Logo</li>
+        <li><NuxtLink to="/artists">Artistes</NuxtLink></li>
         <li>Actualité</li>
         <li>A propos</li>
       </ul>
       <ul>
         <template v-if="!isLogged">
-          <li>Se connecter</li>
-          <li>S'inscrire</li>
+          <li><NuxtLink to="/login">Se connecter</NuxtLink></li>
+          <li><NuxtLink to="/register">S'inscrire</NuxtLink></li>
         </template>
         <template v-else>
           <li>IMG</li>
