@@ -4,6 +4,7 @@
     <ul>
       <li v-for="artist in artists" :key="artist.id">
         <Artist :artist="artist"/>
+        <hr>
       </li>
     </ul>
   </div>
@@ -80,6 +81,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+:is(li){
+  list-style: none;
+  padding: 8px;
+  margin: 8px;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 8px;
+}
 
 </style>

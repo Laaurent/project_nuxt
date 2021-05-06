@@ -4,7 +4,7 @@
       <ul>
         <li>Logo</li>
         <li><NuxtLink to="/artists">Artistes</NuxtLink></li>
-        <li>Actualité</li>
+        <li><NuxtLink to="/news">Actualités</NuxtLink></li>
         <li>A propos</li>
       </ul>
       <ul>
