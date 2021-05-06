@@ -1,3 +1,35 @@
 input{
+    
     display: block;
+    padding: 0.8em;
+    margin:  0px 0px 16px 0px;
+    outline: none;
+
+    &:not([type=submit]){
+        /* color: $primary; */
+        /* border-bottom: 2.4px solid $gray !important; */
+        background-color: rgb(212, 229, 245);
+        border-radius: 0.5em;
+    }
+
+    
+
+    &[type=submit]{
+        font-weight: 800;
+        margin: 40px 0px 16px 0px;
+        padding: 0.5em;
+        background-color: $primary;
+        color: $white;
+        border-radius: 0.5em;
+    }
+}
+
+label{
+    color: $gray;
+}
+
+.form_link{
+    display: block;
+    text-align: center;
+    color: $gray;
 }
