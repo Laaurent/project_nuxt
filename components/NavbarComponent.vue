@@ -2,7 +2,7 @@
   <div class="navbar_wrapper">
     <div class="navbar_container">
       <ul>
-        <li>Logo</li>
+        <!-- <li>Logo</li> -->
         <li :class="this.$route.name == 'artists' ? 'isActive' : ''">
           <NuxtLink to="/artists">Artistes</NuxtLink>
         </li>

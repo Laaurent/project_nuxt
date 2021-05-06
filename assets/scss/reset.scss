@@ -2,6 +2,19 @@ h1{
     color: $primary;
     font-size: 40px;
 }
+a{
+    /* text-decoration: none; */
+    color: $gray;
+    &:visited{
+        color: $gray;
+    }
+    &:hover, &:active, &:focus{
+        /* text-decoration: none; */
+        color: $black;
+    }
+    
+}
 body{
-    font-family: 'Montserrat'
+    font-family: 'Montserrat';
+    color: $black;
 }
