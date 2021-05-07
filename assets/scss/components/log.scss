@@ -1,40 +1,38 @@
-.wrapper{
+.wrapper {
+  display: flex;
+  width: 100%;
+
+  & > div {
+    height: 100vh;
+    flex: 1;
+  }
+
+  .img {
     display: flex;
-    width: 100%;
+    /* align-items: center; */
 
-    & > div {
-        height: 100vh;
-        flex: 1;
+    justify-content: center;
+    img {
+      /* margin-top: 160px; */
+      margin-left: 80px;
+      width: 80%;
     }
+  }
 
-    .img{
-        display: flex;
-        /* align-items: center; */
-        
-        justify-content: center;
-        img{
-            /* margin-top: 160px; */
-            margin-left: 80px;
-        }
-        .register_img{
-            width: 70%;
-        }
-    }
+  .form {
+    display: flex;
+    /* align-items: center; */
 
-    .form{
-        display: flex;
-        /* align-items: center; */
-        
-        justify-content: center;
-        .form_item{
-            margin-top: 240px;
-            width: 400px;
-            input{
-                width: 100%;
-            }
-            h1{
-                color: $primary;
-            }
-        }
+    justify-content: center;
+    .form_item {
+      margin-top: 240px;
+      width: 400px;
+      input {
+        width: 100%;
+      }
+      h1 {
+        color: $primary;
+      }
     }
+  }
 }

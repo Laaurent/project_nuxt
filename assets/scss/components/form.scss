@@ -1,50 +1,72 @@
-input{
-    
-    display: block;
-    padding: 0.8em;
-    margin:  0px 0px 16px 0px;
-    outline: none;
+input {
+  display: block;
+  padding: 0.8em;
+  margin: 0px 0px 16px 0px;
+  outline: none;
 
-    &:not([type=submit]){
-        /* color: $primary; */
-        /* border-bottom: 2.4px solid $gray !important; */
-        background-color: $input_color;
-        border-radius: 0.5em;
-    }
+  &:not([type="submit"]) {
+    /* color: $primary; */
+    /* border-bottom: 2.4px solid $gray !important; */
+    background-color: $input_color;
+    border-radius: 0.5em;
+  }
 
-    
-
-    &[type=submit]{
-        font-weight: 800;
-        margin: 40px 0px 16px 0px;
-        padding: 0.5em;
-        background-color: $primary;
-        color: $white;
-        border-radius: 0.5em;
-    }
-}
-
-label{
-    color: $gray;
-}
-
-.form_link{
-    display: block;
-    text-align: center;
-    color: $gray;
-}
-
-button , input[type=submit]{
-    cursor: pointer;
+  &[type="submit"] {
     font-weight: 800;
     margin: 40px 0px 16px 0px;
     padding: 0.5em;
     background-color: $primary;
     color: $white;
     border-radius: 0.5em;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-button:hover, input[type=submit]:hover {
-    background-color: $secondary;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   }
+}
+
+.input_div {
+  position: relative;
+}
+.is_error {
+  width: 0;
+  height: 0;
+  &::after {
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    content: "\f00d";
+    color: $red;
+    filter: drop-shadow(2px 2px 0.4px rgba(0, 0, 0, 0.1));
+    font-weight: 900;
+    top: -53px;
+    left: 370px;
+  }
+}
+
+label {
+  color: $gray;
+}
+
+.form_link {
+  display: block;
+  text-align: center;
+  color: $gray;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+  font-weight: 800;
+  margin: 40px 0px 16px 0px;
+  padding: 0.5em;
+  background-color: $primary;
+  color: $white;
+  border-radius: 0.5em;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+button:hover,
+input[type="submit"]:hover {
+  background-color: $secondary;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+
+.error {
+  color: $red !important;
+  margin: 16px 0px;
+}
