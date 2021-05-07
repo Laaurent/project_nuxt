@@ -27,22 +27,20 @@ export default {
     Artist
   },
   mounted() {
-    let tmpArtists = [];
-    
-    this.getArtists()
-      .then(a => {
-        tmpArtists = a;
-        this.getGenres().then(() => this.setGenres(tmpArtists));
-        this.getAlbums().then(() => this.setAlbums(tmpArtists));
-        this.getConcerts().then(() => this.setConcerts(tmpArtists));
-      })
-      .then(() => this.artists = tmpArtists);
+    this.getArtists().then((a) => {
+      const reqGenres = this.getGenres().then(() => this.setGenres(a));
+      const reqAlbums = this.getAlbums().then(() => this.setAlbums(a));
+      const reqConcerts = this.getConcerts().then(() => this.setConcerts(a));
+
+      Promise.all([reqGenres, reqAlbums, reqConcerts])
+        .then(() => this.artists = a);
+    });
   },
   methods: {
     // GETTERS
     getArtists(){
       return axios.get('http://localhost:3000/artists')
-        .then(a => this.artists = a.data)
+        .then(a =>  a.data)
         .catch(err => console.error('failed to get artists\n',err))
     },
     getGenres(){
