@@ -8,7 +8,7 @@ input{
     &:not([type=submit]){
         /* color: $primary; */
         /* border-bottom: 2.4px solid $gray !important; */
-        background-color: rgb(212, 229, 245);
+        background-color: $input_color;
         border-radius: 0.5em;
     }
 

@@ -14,6 +14,9 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat'
+      },
+      {
+        rel: 'stylesheet', href: 'https://use.typekit.net/sbl0zfx.css'
       }
     ],
 
