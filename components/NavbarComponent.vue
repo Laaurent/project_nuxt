@@ -16,7 +16,10 @@
           <li :class="this.$route.name == 'login' ? 'isActive' : ''">
             <NuxtLink to="/login">Se connecter</NuxtLink>
           </li>
-          <li :class="this.$route.name == 'register' ? 'isActive' : ''">
+          <li
+            class="li_register"
+            :class="this.$route.name == 'register' ? 'isActive' : ''"
+          >
             <NuxtLink to="/register">S'inscrire</NuxtLink>
           </li>
         </template>

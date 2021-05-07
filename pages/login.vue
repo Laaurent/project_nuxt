@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="wrapper">
-      <div></div>
+      <div class="img">
+        <img
+          src="@/assets/images/svg/imagination.svg"
+          alt="imagination image"
+        />
+      </div>
       <!-- FORMULAIRE -->
       <div class="form">
         <div class="form_item">
