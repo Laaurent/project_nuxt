@@ -6,15 +6,28 @@
         height: 100vh;
         flex: 1;
     }
-    .form{
+
+    .img{
+        display: flex;
+        /* align-items: center; */
         
-        background-color: $white;
+        justify-content: center;
+        img{
+            /* margin-top: 160px; */
+            margin-left: 80px;
+        }
+        .register_img{
+            width: 70%;
+        }
+    }
+
+    .form{
         display: flex;
         /* align-items: center; */
         
         justify-content: center;
         .form_item{
-            margin-top: 160px;
+            margin-top: 240px;
             width: 400px;
             input{
                 width: 100%;
@@ -23,9 +36,5 @@
                 color: $primary;
             }
         }
-    }
-    
-    & > div:first-child{
-        background-color: $black;
     }
 }

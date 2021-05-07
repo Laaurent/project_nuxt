@@ -1,7 +1,13 @@
 <template>
   <div>
     <div class="wrapper">
-      <div></div>
+      <div class="img">
+        <img
+          class="register_img"
+          src="@/assets/images/svg/party.svg"
+          alt="mello image"
+        />
+      </div>
       <!-- FORMULAIRE -->
       <div class="form">
         <div class="form_item">
