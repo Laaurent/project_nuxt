@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div class="footer">
-      <div class="footer_wrapper">TEST</div>
-    </div>
+  <div class="footer">
+    <div class="footer_wrapper">TEST</div>
   </div>
 </template>
 

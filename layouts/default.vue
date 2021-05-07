@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper_body">
     <NavbarComponent />
     <Nuxt />
     <FooterComponent />

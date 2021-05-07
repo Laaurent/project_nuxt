@@ -20,7 +20,7 @@ html{
 body{
     font-family: 'Montserrat';
     color: $black;
-    background-color: $white;
+    background-color: $white; 
 }
 ul{
     margin-left: 0;
@@ -30,6 +30,12 @@ ul{
     }
 }
 .main{
+    min-height: 77vh;
     margin-top: 80px;
     margin: 96px;
+}
+.wrapper_body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
