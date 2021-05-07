@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <h2> NEWS </h2>
+  <div class="main">
+    <h2>NEWS</h2>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>

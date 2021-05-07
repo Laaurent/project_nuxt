@@ -14,8 +14,22 @@ a{
     }
     
 }
+html{
+    
+}
 body{
     font-family: 'Montserrat';
     color: $black;
     background-color: $white;
+}
+ul{
+    margin-left: 0;
+    padding-left: 0;
+    li{
+        list-style: none;
+    }
+}
+.main{
+    margin-top: 80px;
+    margin: 96px;
 }
