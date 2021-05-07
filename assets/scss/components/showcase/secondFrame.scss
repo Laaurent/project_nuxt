@@ -1,0 +1,22 @@
+.second_frame{
+    height: 100vh;
+    left: 0;
+    background-color: $black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    .wrapper_second_frame{
+        position: absolute;
+        width: 100%;
+        height: 8vh;
+        padding: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        & > div {
+            flex: 1;
+        }
+    }
+}
