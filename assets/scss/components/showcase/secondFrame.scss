@@ -1,22 +1,46 @@
-.second_frame{
-    height: 100vh;
-    left: 0;
-    background-color: $black;
-    margin: 0;
-    display: flex;
-    align-items: center;
+.second_frame {
+  height: 100vh;
+  left: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 
-    .wrapper_second_frame{
-        position: absolute;
-        width: 100%;
-        height: 8vh;
-        padding: 96px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $white;
-        & > div {
-            flex: 1;
-        }
+  .wrapper_second_frame {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > div {
+      height: 100%;
+      background-color: $primary;
+      /*  flex: 2; */
     }
+    & > div.img {
+      width: 60vw;
+      background-color: $gray;
+      .button_swipe_div {
+        position: absolute;
+        left: 96px;
+        /*  margin-top: 40px; */
+        width: 180px;
+
+        align-items: center;
+        display: flex;
+        & > button {
+          margin-top: 40px;
+          margin-right: 40px;
+        }
+      }
+    }
+    & > div.text {
+      width: 40vw;
+      /*  padding: 80px; */
+      color: $white;
+      div {
+        padding: 80px;
+      }
+    }
+  }
 }
