@@ -25,6 +25,9 @@ a {
     color: $black;
   }
 }
+p.secondary {
+  color: rgba($color: $white, $alpha: 0.5);
+}
 html {
 }
 body {
@@ -41,8 +44,8 @@ ul {
 }
 .main {
   min-height: 77vh;
-  margin-top: 80px;
-  /* margin: 96px; */
+
+  margin: 80px 96px;
 }
 .wrapper_body {
   display: flex;

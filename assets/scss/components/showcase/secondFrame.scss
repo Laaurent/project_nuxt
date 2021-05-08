@@ -15,16 +15,18 @@
     & > div {
       height: 100%;
       background-color: $primary;
-      /*  flex: 2; */
     }
     & > div.img {
       width: 60vw;
-      background-color: $gray;
+      background-blend-mode: multiply;
+      background: no-repeat center;
+      background-size: cover;
+
       .button_swipe_div {
         position: absolute;
         left: 96px;
         /*  margin-top: 40px; */
-        width: 180px;
+        width: 190px;
 
         align-items: center;
         display: flex;
@@ -36,10 +38,19 @@
     }
     & > div.text {
       width: 40vw;
+      box-shadow: -8px 0 5px -5px #000;
       /*  padding: 80px; */
       color: $white;
       div {
-        padding: 80px;
+        padding: 96px;
+        p {
+          margin: 16px 0;
+        }
+      }
+      .button_icon {
+        position: absolute;
+        right: 96px;
+        bottom: 96px;
       }
     }
   }

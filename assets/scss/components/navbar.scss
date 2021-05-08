@@ -1,7 +1,7 @@
 .navbar_wrapper {
   top: 0;
   position: absolute;
-  background: linear-gradient(rgba(0,0,0,0.1),transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), transparent);
   padding: 8px 80px;
   width: 100%;
 
@@ -34,7 +34,7 @@
 
         a {
           text-decoration: none;
-          &:hover:not(.logo_mews){
+          &:hover:not(.logo_mews) {
             font-weight: 700;
           }
 
@@ -43,35 +43,32 @@
             fill: $primary !important;
           }
         }
-        &.li_register a{
+        &.li_register a {
           padding: 8px 16px;
-          background-color: aliceblue ;
+          background-color: aliceblue;
           border-radius: 1em;
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-         
-          &:hover{
+
+          &:hover {
             color: $white;
             background-color: $secondary;
-            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            box-shadow: 0px 15px 20px rgba($color: $secondary, $alpha: 0.4);
           }
         }
-
-        
       }
-      li.isActive{
-        & > a{
+      li.isActive {
+        & > a {
           color: $primary;
           font-weight: 900;
         }
-        
-        &:not(.li_register)::after{
+
+        &:not(.li_register)::after {
           content: "";
           width: 16px;
           height: 4px;
           background-color: $primary;
           border-radius: 0.5em;
         }
-        
       }
     }
   }

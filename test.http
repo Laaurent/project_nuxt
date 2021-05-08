@@ -1,7 +1,2 @@
-POST http://localhost:3000/register
-Content-Type:application/json
+GET http://localhost:3000/news
 
-{
-    "email": "olivier@mail.com",
-    "password": "bestPassw0rd"
-}

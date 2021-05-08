@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div>
     <FirstFrameComponent />
     <SecondFrameComponent />
   </div>
@@ -9,9 +9,8 @@
 import FirstFrameComponent from "../components/showcase/FirstFrameComponent.vue";
 import SecondFrameComponent from "../components/showcase/SecondFrameComponent.vue";
 export default {
-  components: { FirstFrameComponent, SecondFrameComponent },
+  components: { FirstFrameComponent, SecondFrameComponent }
 };
 </script>
 
-<style>
-</style>
+<style></style>
