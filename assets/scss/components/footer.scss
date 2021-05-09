@@ -1,9 +1,39 @@
 .footer {
-  background-color: $black;
-  height: 100px;
-  color: $white;
+  background-color: $white;
+  /* height: 100px; */
+  color: $black;
 
   .footer_wrapper {
-    margin: 0 96px;
+    margin: 48px 96px;
+    width: 80%;
+    display: flex;
+    div {
+      flex: 1;
+      svg{
+        width: 96px;
+        color: $primary;
+      }
+      ul{
+        li{
+          margin: 8px;
+          a{
+            text-decoration: none;
+            color: $black;
+            &:hover {
+              font-weight: 700;
+            }
+          }
+          
+          &.title{
+            margin-top:0;
+            color: $secondary;
+            font-weight: 900;
+          }
+          &.cpright{
+            color: gray;
+          }
+        }
+      }
+    }
   }
 }

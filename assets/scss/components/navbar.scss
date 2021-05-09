@@ -1,7 +1,7 @@
 .navbar_wrapper {
   top: 0;
   position: absolute;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.25), transparent);
   padding: 8px 80px;
   width: 100%;
 
@@ -33,6 +33,7 @@
         margin: 0px 16px;
 
         a {
+          color: $black;
           text-decoration: none;
           &:hover:not(.logo_mews) {
             font-weight: 700;
