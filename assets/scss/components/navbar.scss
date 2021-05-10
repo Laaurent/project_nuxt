@@ -1,7 +1,9 @@
 .navbar_wrapper {
+  display: flex;
+  align-items: flex-start;
   top: 0;
   position: absolute;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), transparent);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.25), transparent); */
   padding: 8px 80px;
   width: 100%;
 
@@ -15,6 +17,7 @@
     //taille
     width: 100%;
     height: 80px;
+    height: auto;
     font-size: 16px;
 
     ul {
@@ -28,7 +31,7 @@
         align-items: center;
 
         width: auto;
-        height: 40px;
+        height: 60px;
         list-style: none;
         margin: 0px 16px;
 
@@ -69,6 +72,69 @@
           height: 4px;
           background-color: $primary;
           border-radius: 0.5em;
+        }
+      }
+    }
+  }
+  .avatarDiv {
+    /* background-color: $white; */
+    /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); */
+    border-radius: 1em;
+    width: 240px;
+    height: auto;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    .avatarMenu {
+      /*   margin: 16px; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .avatarPreview {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        border: 4px solid #f8f8f8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        .imgPreview {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+      ul {
+        margin: 24px 0;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        li {
+          margin: 16px 0;
+          a {
+            text-decoration: none;
+          }
+          button {
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 2.5em;
+            margin: 0;
+            padding: 8px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &:hover {
+      /*  width: 300px; */
+      background-color: $white;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+      .avatarMenu:hover {
+        width: auto;
+        ul {
+          opacity: 1;
+          height: auto;
         }
       }
     }

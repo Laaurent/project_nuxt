@@ -10,11 +10,17 @@
           suscipit ratione corporis fugiat ea.
         </p>
       </div>
+      <h3>Daily MEWS</h3>
       <div class="head_news">
         <ul>
-          <li>news 1</li>
-          <li>news 2</li>
-          <li>news 3</li>
+          <li v-for="(item, index) in news" :key="index">
+            <button class="item_news">
+              <div>
+                <h4>{{ item.title }}</h4>
+                <p class="resum">{{ item.content.substring(0, 50) }}...</p>
+              </div>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -22,8 +28,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["news"]
+};
 </script>
 
-<style>
-</style>
+<style></style>

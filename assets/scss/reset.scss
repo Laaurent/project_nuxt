@@ -12,6 +12,19 @@ h2 {
   font-weight: 400;
   font-style: normal;
 }
+h3 {
+  color: $black;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+h4 {
+  color: $primary;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.8em;
+}
 a {
   /* text-decoration: none; */
   color: $gray;
@@ -34,7 +47,6 @@ body {
   font-family: "Montserrat";
   color: $black;
   background-color: $white;
-  
 }
 ul {
   margin-left: 0;

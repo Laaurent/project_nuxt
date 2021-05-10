@@ -87,21 +87,30 @@
         <li>A propos</li>
       </ul>
       <ul>
-        <template v-if="!isLogged">
-          <li :class="this.$route.name == 'login' ? 'isActive' : ''">
-            <NuxtLink to="/login">Se connecter</NuxtLink>
-          </li>
-          <li
-            class="li_register"
-            :class="this.$route.name == 'register' ? 'isActive' : ''"
-          >
-            <NuxtLink to="/register">S'inscrire</NuxtLink>
-          </li>
-        </template>
-        <template v-else>
-          <li>IMG</li>
-        </template>
+        <li :class="this.$route.name == 'login' ? 'isActive' : ''">
+          <NuxtLink to="/login">Se connecter</NuxtLink>
+        </li>
+        <li
+          class="li_register"
+          :class="this.$route.name == 'register' ? 'isActive' : ''"
+        >
+          <NuxtLink class="register_a" to="/register">S'inscrire</NuxtLink>
+        </li>
       </ul>
+    </div>
+    <div class="avatarDiv">
+      <div class="avatarMenu">
+        <div class="avatarPreview">
+          <div
+            class="imgPreview"
+            style="background-image: url(https://pbs.twimg.com/media/ExGq_x6W8AwtUxD.jpg);"
+          ></div>
+        </div>
+        <ul>
+          <li><NuxtLink to="/">Mon profil</NuxtLink></li>
+          <li><button class="">Me déconnecter</button></li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -110,8 +119,8 @@
 export default {
   data() {
     return {
-      isLogged: false,
+      isLogged: false
     };
-  },
+  }
 };
 </script>

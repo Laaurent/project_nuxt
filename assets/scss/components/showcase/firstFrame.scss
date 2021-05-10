@@ -1,8 +1,7 @@
-.first_frame_wrapper{
-
-  background-image: url('../../assets/images/bg.png');
+.first_frame_wrapper {
+  background-image: url("../../assets/images/bg.png");
   background-size: cover;
-  
+
   .first_frame {
     /* background-image: url('../../assets/images/bg.png');
     background-size: cover; */
@@ -18,8 +17,9 @@
     }
 
     .head_news {
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
       width: 800px;
-      height: 80px;
+      height: auto;
       color: $primary;
       background-color: $input_color;
       border-radius: 2em;
@@ -30,13 +30,63 @@
         align-items: center;
         justify-content: center;
         li {
+          position: relative;
+          margin: 0 8px;
           width: 240px;
-          height: 40px;
-          padding: 0 8px;
+          height: auto;
+          /* padding: 0 8px; */
 
           &:nth-child(2) {
             border-left: 1px solid rgba(0, 0, 0, 0.1);
             border-right: 1px solid rgba(0, 0, 0, 0.1);
+          }
+
+          p.resum {
+            font-size: 12px;
+            color: $gray;
+          }
+
+          .item_news {
+            background: transparent;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+            box-shadow: none;
+            margin: 0;
+          }
+
+          .item_news:hover:before {
+            opacity: 1;
+            /*  transform: translate(0, 0); */
+          }
+          .item_news:before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Font Awesome 5 Free";
+            content: "\f002";
+            /* content: "Voir plus \f054"; */
+            position: absolute;
+            background-color: rgba($primary, 0.8);
+            z-index: 2;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            top: 50%;
+            left: 50%;
+            font-size: 24px;
+            opacity: 0;
+            transform: translateX(-50%) translateY(-50%);
+            transition: all 0.3s ease-in-out;
+          }
+
+          .item_news:hover div {
+            opacity: 0.3;
+            transform: translate(0, 150%);
+          }
+          .item_news div {
+            transition: all 0.3s ease-in-out;
           }
         }
       }
