@@ -115,10 +115,13 @@ button.like_round{
     /* transform: translateX(-100%); */
   }
 
-  &:hover{
+  &:hover::after{
     color: $red;
+    position: absolute;
+    top: 0px;
     font-family: "Font Awesome 5 Free";
-            content: "\f004";
+    content: "\f004";
+    font-size: 40px;
   }
 }
 
