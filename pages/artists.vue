@@ -1,10 +1,9 @@
 <template>
   <div class="main">
     <h2>Artistes</h2>
-    <ul>
+    <ul class="artists-ul">
       <li v-for="artist in artists" :key="artist.id">
         <Artist :artist="artist" />
-        <hr />
       </li>
     </ul>
   </div>
@@ -27,15 +26,19 @@ export default {
     Artist,
   },
   mounted() {
-    this.getArtists().then((a) => {
-      const reqGenres = this.getGenres().then(() => this.setGenres(a));
-      const reqAlbums = this.getAlbums().then(() => this.setAlbums(a));
-      const reqConcerts = this.getConcerts().then(() => this.setConcerts(a));
+    // this.getArtists().then((a) => {
+    //   const reqGenres = this.getGenres().then(() => this.setGenres(a));
+    //   const reqAlbums = this.getAlbums().then(() => this.setAlbums(a));
+    //   const reqConcerts = this.getConcerts().then(() => this.setConcerts(a));
 
-      Promise.all([reqGenres, reqAlbums, reqConcerts]).then(
-        () => (this.artists = a)
-      );
-    });
+    //   Promise.all([reqGenres, reqAlbums, reqConcerts]).then(
+    //     () => (this.artists = a)
+    //   );
+    // });
+
+    this.getArtists().then(artists => this.getGenres()
+        .then(() => this.setGenres(artists))
+        .then(() => this.artists = artists));
   },
   methods: {
     // GETTERS

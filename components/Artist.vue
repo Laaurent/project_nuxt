@@ -1,12 +1,13 @@
 <template>
   <div>
-    <span>{{artist.id}}</span>
-    <span>{{artist.name}}</span>
-    <span>{{artist.country}}</span>
-    <img class="avatar" :src="artist.avatar" alt="avatar" />
-    <span>{{artist.genreId}} -> {{artist.genre}} </span>
-    <span>{{artist.likes}}</span>
-    <span>{{artist.description}}</span>
+    <div class="artist-container">
+      <div class="avatar" :style="'background-image: url(' + artist.avatar + ')'"></div>
+      <div class="info">
+        <span class="name"> {{artist.name}}</span>
+        <span class="likes"> {{artist.likes}}❤️</span>
+        <span class="description"> {{artist.description}}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,15 +16,3 @@ export default {
     props: ['artist']
 }
 </script>
-
-
-<style>
-  .avatar {
-    max-width: 10rem;
-  }
-  span {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-</style>
