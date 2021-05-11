@@ -1,3 +1,16 @@
+.searchHeader{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin: 32px 0;
+  .searchbar_wrapper{
+    
+  }
+  button{
+    margin: 0;
+  }
+}
+
 .artists-ul {
     display: flex;
     flex-direction: row;

@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="info">
-        <h3>{{ artist.name }}</h3>
+        <h4>{{ artist.name }}</h4>
         <BadgeComponent :data="artist.genre" />
         <!-- <span class="name"> {{ artist.name }}</span> -->
         <!-- <span class="likes"> {{ artist.likes }}❤️</span> -->
@@ -34,7 +34,7 @@
 import BadgeComponent from "./BadgeComponent";
 export default {
   props: ["artist"],
-  computed: {
+  components: {
     BadgeComponent,
   },
 };

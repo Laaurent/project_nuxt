@@ -1,8 +1,12 @@
 <template>
   <div class="main">
-    <h2>Artistes</h2>
+    <h3>Artistes</h3>
+    <div class="searchHeader">
+      <SearchBarComponent @getPattern="pattern = $event" />
+      <button>Trier par</button>
+    </div>
     <ul class="artists-ul">
-      <li v-for="artist in artists" :key="artist.id">
+      <li v-for="(artist, key) in artists" :key="key">
         <ArtistCardComponent :artist="artist" />
       </li>
     </ul>
@@ -12,6 +16,7 @@
 <script>
 import axios from "axios";
 import ArtistCardComponent from "../components/ArtistCardComponent";
+import SearchBarComponent from "../components/SearchBarComponent";
 
 export default {
   data() {
@@ -20,10 +25,12 @@ export default {
       genres: [],
       albums: [],
       concerts: [],
+      pattern: undefined,
     };
   },
   components: {
     ArtistCardComponent,
+    SearchBarComponent,
   },
   mounted() {
     // this.getArtists().then((a) => {
