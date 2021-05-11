@@ -1,0 +1,34 @@
+.artists-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.artist-container {
+  height: $card_heigth;
+  width: $card_width;
+  margin: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+  .avatar {
+    height: calc(#{$card_heigth} * 0.8);
+  }
+  .info {
+    height: calc(#{$card_heigth} * 0.2);
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    .name {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .likes {
+    }
+    .description {
+      color: $gray;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
