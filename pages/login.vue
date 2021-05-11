@@ -90,11 +90,9 @@ export default {
         this.user.password_error = true;
       }
       if (!this.user.password_error && !this.user.email_error) {
-        axios
-          .post(
-            `http://localhost:3000/login`,
-            { email: this.user.email, password: this.user.password },
-            { withCredentials: true }
+        this.$auth.loginWith(
+            `local`,
+            { data: {email: this.user.email, password: this.user.password}  }
           )
           .then(response => {
             console.log(response.data);
