@@ -1,11 +1,22 @@
 <template>
   <div class="main">
     <h3>Artistes</h3>
+
     <div class="searchHeader">
-      <SearchBarComponent @getPattern="pattern = $event" />
+      <SearchBarComponent @getPattern="searchArtists($event)" />
       <button>Trier par</button>
     </div>
-    <ul class="artists-ul">
+
+    <scale-loader
+      :loading="loading"
+      :color="'#1f59fa'"
+      :height="'24px'"
+      :width="'3px'"
+    ></scale-loader>
+    <p v-if="!artists || artists.length == 0" class="searchIssue">
+      Aucun artiste ne correspond à votre recherche, réessayer plus tard ... 🤷🏼‍♂️
+    </p>
+    <ul v-if="!loading && artists" class="artists-ul">
       <li v-for="(artist, key) in artists" :key="key">
         <ArtistCardComponent :artist="artist" />
       </li>
@@ -15,6 +26,7 @@
 
 <script>
 import axios from "axios";
+import ScaleLoader from "vue-spinner/src/ScaleLoader.vue";
 import ArtistCardComponent from "../components/ArtistCardComponent";
 import SearchBarComponent from "../components/SearchBarComponent";
 
@@ -25,12 +37,13 @@ export default {
       genres: [],
       albums: [],
       concerts: [],
-      pattern: undefined,
+      loading: false,
     };
   },
   components: {
     ArtistCardComponent,
     SearchBarComponent,
+    ScaleLoader,
   },
   mounted() {
     // this.getArtists().then((a) => {
@@ -50,6 +63,22 @@ export default {
     );
   },
   methods: {
+    async searchArtists(pattern) {
+      this.loading = true;
+      await axios
+        .get(`http://localhost:3000/artists?name_like=${pattern}`)
+        .then((response) => {
+          this.setGenres(response.data);
+          this.artists = response.data;
+          this.loading = false;
+          /*  setTimeout(() => {
+            this.loading = false;
+          }, 800); */
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
     // GETTERS
     getArtists() {
       return axios
@@ -63,7 +92,7 @@ export default {
         .then((g) => (this.genres = g.data))
         .catch((err) => console.error("Failed to get genres\n", err));
     },
-    getAlbums() {
+    /*  getAlbums() {
       return axios
         .get("http://localhost:3000/albums")
         .then((a) => (this.albums = a.data))
@@ -74,7 +103,7 @@ export default {
         .get("http://localhost:3000/concerts")
         .then((c) => (this.concerts = c.data))
         .catch((err) => console.error("Failed to get concerts\n", err));
-    },
+    }, */
 
     // SETTERS
     setGenres(tmpArtists) {
@@ -82,7 +111,7 @@ export default {
         a.genre = this.genres.find((g) => g.id === a.genreId).name;
       });
     },
-    setAlbums(tmpArtists) {
+    /* setAlbums(tmpArtists) {
       tmpArtists.forEach((artist) => {
         artist.albums = this.albums.filter(
           (album) => album.artistId === artist.id
@@ -95,7 +124,7 @@ export default {
           (concert) => concert.artistId === artist.id
         );
       });
-    },
+    }, */
   },
 };
 </script>
