@@ -1,11 +1,8 @@
 .searchHeader{
   display: flex;
   justify-content: space-between;
-  align-self: center;
+  align-content: center;
   margin: 32px 0;
-  .searchbar_wrapper{
-    
-  }
   button{
     margin: 0;
   }
@@ -13,9 +10,10 @@
 
 .artists-ul {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-wrap: wrap;
     justify-content: space-between;
+  
     /* background-color: green; */
     /* &::after{
         content: "";
@@ -25,4 +23,5 @@
 .searchIssue{
   color: $gray;
   margin: 40px 0;
+  font-weight: 700;
 }
