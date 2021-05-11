@@ -98,7 +98,7 @@
         </li>
       </ul>
     </div>
-    <div class="avatarDiv">
+    <!-- <div class="avatarDiv">
       <div class="avatarMenu">
         <div class="avatarPreview">
           <div
@@ -111,7 +111,7 @@
           <li><button class="">Me déconnecter</button></li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -119,8 +119,8 @@
 export default {
   data() {
     return {
-      isLogged: false
+      isLogged: false,
     };
-  }
+  },
 };
 </script>

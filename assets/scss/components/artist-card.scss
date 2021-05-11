@@ -1,17 +1,46 @@
-.artists-ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .artist-container {
   height: $card_heigth;
   width: $card_width;
-  margin: 8px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
-  .avatar {
+  margin: 16px 0;
+  
+ /*  border-radius: 8px; */
+  /* border: 1px solid $gray; */
+  /* box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2); */
+  .avatar_wrapper{
+    position: relative;
     height: calc(#{$card_heigth} * 0.8);
+    box-shadow: 2px 2px 8px 2px rgba($black, 0.4);
+    .avatar {
+      height: calc(#{$card_heigth} * 0.8);
+      background-blend-mode: multiply;
+      background: no-repeat center;
+      background-size: cover;
+      
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .avatar_layout{
+      display: none;
+      button{
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+    }
+    &:hover .avatar_layout{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($color: $white, $alpha: 0.2);
+    }
+    .foreground{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
   .info {
     height: calc(#{$card_heigth} * 0.2);

@@ -3,7 +3,7 @@
     <h2>Artistes</h2>
     <ul class="artists-ul">
       <li v-for="artist in artists" :key="artist.id">
-        <Artist :artist="artist" />
+        <ArtistCardComponent :artist="artist" />
       </li>
     </ul>
   </div>
@@ -11,7 +11,7 @@
 
 <script>
 import axios from "axios";
-import Artist from "../components/Artist";
+import ArtistCardComponent from "../components/ArtistCardComponent";
 
 export default {
   data() {
@@ -23,7 +23,7 @@ export default {
     };
   },
   components: {
-    Artist,
+    ArtistCardComponent,
   },
   mounted() {
     // this.getArtists().then((a) => {
@@ -36,9 +36,11 @@ export default {
     //   );
     // });
 
-    this.getArtists().then(artists => this.getGenres()
+    this.getArtists().then((artists) =>
+      this.getGenres()
         .then(() => this.setGenres(artists))
-        .then(() => this.artists = artists));
+        .then(() => (this.artists = artists))
+    );
   },
   methods: {
     // GETTERS
