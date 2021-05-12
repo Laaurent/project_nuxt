@@ -40,7 +40,7 @@ export default {
   data() {
     return {
       left: 0,
-      right: 4,
+      right: 10,
     };
   },
   computed: {
