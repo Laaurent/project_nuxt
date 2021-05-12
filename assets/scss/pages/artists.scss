@@ -14,11 +14,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
   
-    /* background-color: green; */
-    /* &::after{
+    &::after{
         content: "";
-        flex: auto;
-      } */
+        /* flex: auto; */
+        width: 39%;
+        right: 0;
+    }
 }
 .searchIssue{
   color: $gray;
