@@ -17,9 +17,9 @@
               <h3>{{ artist.name }}</h3>
               <div class="badges_div">
                 <BadgeComponent
-                  v-for="(genre, index) in artist.genreId"
+                  v-for="(genre, index) in artist.genres"
                   :key="index"
-                  :data="'' + genre + ''"
+                  :data="genre"
                 />
               </div>
             </div>
@@ -49,11 +49,14 @@ export default {
     };
   },
   created() {
-    console.log(this.$nuxt.$route);
     axios
       .get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
       .then((response) => {
         this.artist = response.data[0];
+      })
+      .then(() => {
+        axios.get(`http://localhost:3000/genres?id=${this.artist.genreId.join('&id=')}`)
+          .then(genres => this.artist.genres = genres.data.map(genre => genre.name))
       })
       .catch((error) => {
         console.error(error);

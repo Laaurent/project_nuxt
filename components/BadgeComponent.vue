@@ -1,7 +1,6 @@
 <template>
   <div class="badge_wrapper" :style="'background-color: ' + color">
-    <p>{{ data.substring(0, 7).toUpperCase() }}</p>
-    <!-- <p>aaaaaaaa</p> -->
+    <p>{{ data.toUpperCase()}}</p>
   </div>
 </template>
 
