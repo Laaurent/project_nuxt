@@ -105,7 +105,9 @@ button.button_swipe {
   }
 }
 
-button.like_round{
+
+
+button.icon_round{
   margin: 0;
   width: auto;
   height: auto;
@@ -118,16 +120,37 @@ button.like_round{
   
   i{
     font-size: 32px;
-    /* transform: translateX(-100%); */
+  }
+
+  &:hover{
+    color: rgba($color:$white, $alpha: 0);
   }
 
   &:hover::after{
-    color: $red;
     position: absolute;
-    top: 0px;
+    top: 0;
     font-family: "Font Awesome 5 Free";
-    content: "\f004";
     font-size: 40px;
+  }
+}
+
+button.like_round{
+  &:hover::after{
+    color: $red; 
+    content: "\f004";
+  }
+}
+
+button.left_round{
+  &:hover::after{
+    color: $primary; 
+    content: "\f053";
+  }
+}
+button.right_round{
+  &:hover::after{
+    color: $primary; 
+    content: "\f054";
   }
 }
 

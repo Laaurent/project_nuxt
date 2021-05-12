@@ -1,11 +1,12 @@
 
 .details_card{
     
-    height: 88vh;
+    
     .details_wrapper{
         padding: 32px;
         /* width: 100%; */
         height: 48vh;
+        height: auto;
        /*  position: absolute; */
         background-color: rgba($input_color,0.4);
         margin-top: 160px;
@@ -47,9 +48,8 @@
             }
         }
         .details_footer{
-            background-color: bisque;
+            /* background-color: bisque; */
             width: 100%;
-            display: flex;
         }
     }
 }

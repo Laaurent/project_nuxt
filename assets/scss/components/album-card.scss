@@ -1,0 +1,22 @@
+.albumcard_wrapper{
+    max-width: 160px;
+    .albumcard_avatar{
+        width: 160px;
+        height: 160px;
+       /*  background-blend-mode: inherit; */
+        background: no-repeat center;
+        background-size: cover;
+        box-shadow: 2px 2px 8px 2px rgba($black, 0.4);
+    }
+    .albumcard_info{
+        margin: 16px 0 0;
+        h6{
+            margin: 0;
+            font-size: 13px;
+        }
+        p{
+            color: $primary;
+            font-size: 12px;
+        }
+    }
+}

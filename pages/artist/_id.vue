@@ -33,13 +33,7 @@
         </div>
         <div class="details_main">{{ artist.concerts }}</div>
         <div class="details_footer">
-          <div class="albums_wrapper">
-            <album-card-component
-              v-for="(album, index) in artist.album"
-              :key="index"
-              :album="album"
-            ></album-card-component>
-          </div>
+          <AlbumsPreviewComponent :albums="artist.albums" />
         </div>
       </div>
     </div>
@@ -49,9 +43,9 @@
 <script>
 import axios from "axios";
 import BadgeComponent from "../../components/BadgeComponent.vue";
-import AlbumCardComponent from "../../components/AlbumCardComponent.vue";
+import AlbumsPreviewComponent from "../../components/AlbumsPreviewComponent.vue";
 export default {
-  components: { BadgeComponent, AlbumCardComponent },
+  components: { BadgeComponent, AlbumsPreviewComponent },
   data() {
     return {
       artist: {},

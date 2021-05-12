@@ -18,7 +18,7 @@
           "
         ></div>
         <div class="foreground">
-          <button class="like_round">
+          <button class="icon_round like_round">
             <i class="far fa-heart"></i>
           </button>
         </div>
