@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 64px;
+    min-width: 64px;
+    margin-right: 4px ;
     border-radius: 0.35em;
     color: rgba($color: $black, $alpha: 0.6);
     p{

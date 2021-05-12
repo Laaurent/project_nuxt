@@ -13,7 +13,7 @@ export default {
       switch (this.data) {
         case "rock":
           return "#FFADAD";
-        case "metal":
+        case "Hip-Hop":
           return "#FFD6A5";
         case "rap":
           return "#FDFFB6";

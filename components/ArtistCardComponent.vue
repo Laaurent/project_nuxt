@@ -21,11 +21,14 @@
       </div>
       <div class="info">
         <h4>{{ artist.name }}</h4>
-        <BadgeComponent
-          v-for="(genre, index) in artist.genre"
-          :key="index"
-          :data="genre"
-        />
+        <div class="badges_div">
+          <BadgeComponent
+            v-for="(genre, index) in artist.genre"
+            :key="index"
+            :data="genre"
+          />
+        </div>
+
         <!-- <span class="name"> {{ artist.name }}</span> -->
         <!-- <span class="likes"> {{ artist.likes }}❤️</span> -->
         <!-- <span class="description"> {{artist.description}}</span> -->

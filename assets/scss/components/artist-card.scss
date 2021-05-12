@@ -51,7 +51,8 @@
       font-size: 24px;
       font-weight: 600;
     }
-    .likes {
+    .badges_div {
+      display: flex;
     }
     .description {
       color: $gray;
