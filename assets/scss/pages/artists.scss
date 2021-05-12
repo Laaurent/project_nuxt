@@ -26,3 +26,14 @@
   margin: 40px 0;
   font-weight: 700;
 }
+
+@media (max-width: 1023px) {
+  .searchHeader {
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .artists-ul{
+    justify-content: center;
+  }
+}

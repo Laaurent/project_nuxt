@@ -51,9 +51,7 @@
       font-size: 24px;
       font-weight: 600;
     }
-    .badges_div {
-      display: flex;
-    }
+   
     .description {
       color: $gray;
       text-overflow: ellipsis;
@@ -61,4 +59,7 @@
       overflow: hidden;
     }
   }
+}
+.badges_div {
+  display: flex;
 }

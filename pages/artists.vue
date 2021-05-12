@@ -13,7 +13,7 @@
       :height="'24px'"
       :width="'3px'"
     ></scale-loader>
-    <p v-if="!artists || artists.length == 0" class="searchIssue">
+    <p v-if="artists.length == 0" class="searchIssue">
       Aucun artiste ne correspond à votre recherche, réessayez plus tard ... 🤷🏼‍♂️
     </p>
     <ul v-if="!loading && artists" class="artists-ul">
