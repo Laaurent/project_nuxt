@@ -6,6 +6,7 @@
       id=""
       v-model="pattern"
       placeholder="Nom de l'artiste que vous cherchez ..."
+      @keyup.enter="$emit('getPattern', pattern)"
     />
     <button @click="$emit('getPattern', pattern)">
       <i class="fas fa-search"></i>
