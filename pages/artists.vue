@@ -14,7 +14,7 @@
       :width="'3px'"
     ></scale-loader>
     <p v-if="!artists || artists.length == 0" class="searchIssue">
-      Aucun artiste ne correspond à votre recherche, réessayer plus tard ... 🤷🏼‍♂️
+      Aucun artiste ne correspond à votre recherche, réessayez plus tard ... 🤷🏼‍♂️
     </p>
     <ul v-if="!loading && artists" class="artists-ul">
       <li v-for="(artist, key) in artists" :key="key">
@@ -58,7 +58,10 @@ export default {
 
     this.getArtists().then((artists) =>
       this.getGenres()
-        .then(() => this.setGenres(artists))
+        .then(() => {
+          this.setGenres(artists);
+          console.log(artists);
+        })
         .then(() => (this.artists = artists))
     );
   },
@@ -108,7 +111,13 @@ export default {
     // SETTERS
     setGenres(tmpArtists) {
       tmpArtists.forEach((a) => {
-        a.genre = this.genres.find((g) => g.id === a.genreId).name;
+        /* console.log(a); */
+        a.genre = [];
+        a.genreId.forEach((genre) => {
+          console.log(genre);
+          a.genre.push(this.genres.find((g) => g.id === genre).name);
+          /* console.log(a); */
+        });
       });
     },
     /* setAlbums(tmpArtists) {

@@ -93,7 +93,7 @@
     },
     {
       "id": 2,
-      "name": "metal"
+      "name": "Hip-Hop"
     },
     {
       "id": 3,
@@ -126,7 +126,9 @@
       "name": "Hamza",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwnipcjpeLoHXcIfl7wrMvBx47yIHojAu5jBg4MoBDw=s900-c-k-c0x00ffffff-no-rj",
       "origin": "Belgique",
-      "genreId": 3,
+      "genreId": [
+        3
+      ],
       "likes": 20420,
       "description": "Hamza, de son nom complet Hamza Al-Farissi3, né le 1er août 1994 en Belgique, est un rappeur, chanteur et beatmaker belge d’origine marocaine. Il est également connu pour son appartenance à la nouvelle vague du rap belge des années 2010 avec des artistes tels que Damso ou Shay4."
     },
@@ -135,7 +137,9 @@
       "name": "Alpha Wann",
       "avatar": "https://images.genius.com/9eceb53405edce9e22267af62f7b2548.427x427x1.png",
       "origin": "France",
-      "genreId": 3,
+      "genreId": [
+        3
+      ],
       "likes": 3456,
       "description": "Alpha Omar Wann, dit Alpha Wann, né le 2 juillet 1989 dans le 14e arrondissement de Paris, est un rappeur (auteur-interprète) français. Il est membre de l'ancien groupe 1995 et du collectif L'Entourage."
     },
@@ -144,7 +148,9 @@
       "name": "Damso",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Festival_des_Vieilles_Charrues_2018_-_Damso_-_006.jpg/800px-Festival_des_Vieilles_Charrues_2018_-_Damso_-_006.jpg",
       "origin": "Belgique",
-      "genreId": 3,
+      "genreId": [
+        3
+      ],
       "likes": 20420,
       "description": "Damso, de son vrai nom William Kalubi Mwamba, né le 10 mai 1992 à Kinshasa (Zaïre, actuelle République démocratique du Congo), est un rappeur et auteur-compositeur-interprète belgo-congolais."
     },
@@ -153,7 +159,10 @@
       "name": "The Weeknd",
       "avatar": "https://www.rollingstone.fr/RS-WP-magazine/wp-content/uploads/2020/02/THE-WEEKND-by-Duncan-Loudon-980x600.jpg",
       "origin": "Canada",
-      "genreId": 6,
+      "genreId": [
+        6,
+        2
+      ],
       "likes": 120420,
       "description": "The Weeknd, de son vrai nom Abel Makkonen Tesfaye, né le 16 février 1990 à Toronto, au Canada, est un auteur-compositeur-interprète, musicien et producteur canadien."
     },
@@ -162,7 +171,10 @@
       "name": "PARTYNEXTDOOR",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/8/87/PartyNextDoor_2016_press_photo.png",
       "origin": "Canada",
-      "genreId": 6,
+      "genreId": [
+        6,
+        2
+      ],
       "likes": 90420,
       "description": "Jahron Anthony Brathwaite (né le 3 juillet 1993), plus connu sous le nom de scène PartyNextDoor (parfois stylisé PARTYNEXTDOOR), est un chanteur canadien natif de Mississauga en Ontario qui est signé sur le label OVO Sound de Drake. Il a réalisé son premier EP le 1er juin 2013 sous OVO Sound."
     },
@@ -171,7 +183,10 @@
       "name": "Mac Miller",
       "avatar": "https://i.guim.co.uk/img/media/d67ee6e706a6e2501f79f539fdbeabcdf4e34f94/93_0_2498_1500/master/2498.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=35f3cccb148d7ba75936b6416f110cb9",
       "origin": "Amerique",
-      "genreId": 3,
+      "genreId": [
+        3,
+        2
+      ],
       "likes": 110420,
       "description": "Mac Miller, nom de scène de Malcolm James McCormick, né le 19 janvier 1992 à Pittsburgh (Pennsylvanie) et mort le 7 septembre 2018 à Los Angeles (Californie) des suites d'une overdose, est un rappeur américain et producteur sous le nom de Larry Fisherman."
     },
@@ -180,7 +195,10 @@
       "name": "Kaytranada",
       "avatar": "https://groover.ca/wp-content/uploads/2020/12/kaytranada-2-sonar-bcn-2019.jpg",
       "origin": "Kaïti",
-      "genreId": 6,
+      "genreId": [
+        6,
+        2
+      ],
       "likes": 70420,
       "description": "Louis Kevin Celestin, né le 25 août 1992, mieux connu sous son nom de scène Kaytranada, est un musicien électronique canado-haïtien, producteur et DJ"
     },
@@ -189,7 +207,10 @@
       "name": "Frank Ocean",
       "avatar": "https://www.modzik.com/wp-content/uploads/2016/08/iamsu-frank-ocean-boys-dont-cry-00.jpg",
       "origin": "Amerique",
-      "genreId": 6,
+      "genreId": [
+        6,
+        2
+      ],
       "likes": 220420,
       "description": "Damso, de son vrai nom William Kalubi Mwamba, né le 10 mai 1992 à Kinshasa (Zaïre, actuelle République démocratique du Congo), est un rappeur et auteur-compositeur-interprète belgo-congolais.Christopher Francis Ocean, né Christopher Edwin Breaux3, le 28 octobre 1987 à Long Beach (Californie), plus connu sous son nom de scène Frank Ocean, est un auteur-compositeur-interprète américain."
     },
@@ -198,7 +219,10 @@
       "name": "Tyler the Creator",
       "avatar": "https://www.clique.tv/wp-content/uploads/2016/04/tyler-the-creator-golf-wang.jpg",
       "origin": "Amerique",
-      "genreId": 3,
+      "genreId": [
+        3,
+        2
+      ],
       "likes": 320420,
       "description": "Tyler, The Creator, de son vrai nom Tyler Gregory Okonma, né le 6 mars 1991 à Los Angeles, en Californie, est un rappeur, producteur de musique, acteur, designer, graphiste, réalisateur et scénariste américain."
     },
@@ -207,7 +231,10 @@
       "name": "Drake",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Drake_and_Future_2016_Summer_Sixteen_Tour_%28cropped%29.jpg",
       "origin": "Amerique",
-      "genreId": 3,
+      "genreId": [
+        3,
+        2
+      ],
       "likes": 920420,
       "description": "Drake (/dɹeɪk/), de son vrai nom Aubrey Drake Graham, né le 24 octobre 1986 à Toronto, en Ontario, au Canada, est un rappeur-compositeur et acteur canadien. "
     },
@@ -216,7 +243,10 @@
       "name": "Kanye West",
       "avatar": "https://images.omerlocdn.com/resize?url=https%3A%2F%2Fgcm-v2.omerlocdn.com%2Fproduction%2Fglobal%2Ffiles%2Fimage%2Fa3502114-2af1-4bce-aae6-90e0dec4af72.jpg&stripmeta=true&width=1024&type=jpeg",
       "origin": "Amerique",
-      "genreId": 3,
+      "genreId": [
+        3,
+        2
+      ],
       "likes": 20420,
       "description": "Kanye West, de son nom complet Kanye Omari West /ˈkɑːnjeɪ wɛst/3, né le 8 juin 1977 à Atlanta, en Géorgie, est un rappeur, compositeur, réalisateur artistique, réalisateur et designer américain, originaire de Chicago, dans l'Illinois."
     },
@@ -225,7 +255,9 @@
       "name": "Travis Scott",
       "avatar": "https://img.20mn.fr/1mm-W3prTQifjD1mqVgMNA/830x532_rappeur-travis-scott.jpg",
       "origin": "Amerique",
-      "genreId": 3,
+      "genreId": [
+        3
+      ],
       "likes": 910420,
       "description": "Travis Scott, anciennement stylisé Travi$ Scott, de son vrai nom Jacques Berman Webster II, né le 30 avril 1992 à Houston au Texas, est un rappeur, chanteur, producteur, musicien, acteur, mannequin et réalisateur américain. Il est signé sur les labels Grand Hustle et Epic, ainsi que sur le label de Kanye West, GOOD Music, comme producteur."
     },
@@ -234,7 +266,10 @@
       "name": "Kid Cudi",
       "avatar": "https://cdn.radiofrance.fr/s3/cruiser-production/2020/10/b6597a1f-2a0c-4c28-8c05-819f3f5744b5/1200x680_kidcudi.jpg",
       "origin": "Amerique",
-      "genreId": 3,
+      "genreId": [
+        3,
+        2
+      ],
       "likes": 140420,
       "description": "Kid Cudi, parfois stylisé KiD CuDi, de son vrai nom Scott Ramon Seguro Mescudi, né le 30 janvier 1984 à Cleveland dans l'Ohio4, est un rappeur, chanteur, auteur-compositeur, réalisateur artistique, producteur musical et acteur américain. Il a été largement reconnu comme une influence sur plusieurs groupes hip hop et alternatifs contemporains."
     }
