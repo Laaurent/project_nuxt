@@ -3,7 +3,11 @@
     <div class="artist-container">
       <div class="avatar_wrapper">
         <div class="avatar_layout">
-          <button class="button_icon">Voir plus</button>
+          <NuxtLink
+            :to="{ name: 'artist-id', params: { id: artist.id } }"
+            class="button_icon"
+            >Voir plus</NuxtLink
+          >
         </div>
         <div
           class="avatar"

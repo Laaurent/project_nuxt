@@ -1,6 +1,6 @@
 .searchbar_wrapper{
     display: flex;
-   /*  justify-content: center; */
+    justify-content: center;
     align-items: flex-start;
     height: auto;
     
@@ -32,3 +32,11 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .searchbar_wrapper {
+      input{  
+          width: 100%;
+        }
+    }
+  }
