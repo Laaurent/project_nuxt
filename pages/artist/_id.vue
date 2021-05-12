@@ -48,18 +48,16 @@ export default {
       artist: {},
     };
   },
-  created() {
-    axios
-      .get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
-      .then((response) => {
-        this.artist = response.data[0];
-      })
-      .then(() => {
-        axios.get(`http://localhost:3000/genres?id=${this.artist.genreId.join('&id=')}`)
-          .then(genres => this.artist.genres = genres.data.map(genre => genre.name))
-      })
-      .catch((error) => {
-        console.error(error);
+  mounted() {
+    axios.get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
+      .then(response => response.data[0])
+      .then((respArtist) => {
+        axios.get(`http://localhost:3000/genres?id=${respArtist.genreId.join('&id=')}`)
+          .then(respGenre => respGenre.data.map(genre => genre.name))
+          .then(respGenreData => {
+            respArtist.genres = respGenreData;
+            this.artist = respArtist;
+          });
       });
   },
 };
