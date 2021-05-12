@@ -31,8 +31,8 @@
             </div>
           </div>
         </div>
-        <div class="details_main">MAIN</div>
-        <div class="details_footer">FOOTER</div>
+        <div class="details_main">{{ artist.concerts }}</div>
+        <div class="details_footer">{{ artist.albums }}</div>
       </div>
     </div>
   </div>
@@ -49,15 +49,35 @@ export default {
     };
   },
   mounted() {
-    axios.get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
-      .then(response => response.data[0])
+    axios
+      .get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
+      .then((response) => response.data[0])
       .then((respArtist) => {
-        axios.get(`http://localhost:3000/genres?id=${respArtist.genreId.join('&id=')}`)
-          .then(respGenre => respGenre.data.map(genre => genre.name))
-          .then(respGenreData => {
+        //GENRES
+        let reqGenres = axios
+          .get(
+            `http://localhost:3000/genres?id=${respArtist.genreId.join("&id=")}`
+          )
+          .then((respGenre) => respGenre.data.map((genre) => genre.name))
+          .then((respGenreData) => {
             respArtist.genres = respGenreData;
-            this.artist = respArtist;
           });
+        //CONCERTS
+        let reqConcerts = axios
+          .get(`http://localhost:3000/concerts?artistId=${respArtist.id}`)
+          .then((respConcert) => {
+            respArtist.concerts = respConcert.data;
+          });
+        //ALBUMS
+        let reqAlbums = axios
+          .get(`http://localhost:3000/albums?artistId=${respArtist.id}`)
+          .then((respAlbums) => {
+            respArtist.albums = respAlbums.data;
+          });
+
+        Promise.all([reqGenres, reqConcerts, reqAlbums]).then((response) => {
+          this.artist = respArtist;
+        });
       });
   },
 };
