@@ -86,7 +86,7 @@
         </li>
         <li>A propos</li>
       </ul>
-      <ul>
+      <ul v-if="!islogged">
         <li :class="this.$route.name == 'login' ? 'isActive' : ''">
           <NuxtLink to="/login">Se connecter</NuxtLink>
         </li>
@@ -98,7 +98,7 @@
         </li>
       </ul>
     </div>
-    <div class="avatarDiv">
+    <div class="avatarDiv" v-if="islogged">
       <div class="avatarMenu">
         <div class="avatarPreview">
           <div
@@ -108,7 +108,7 @@
         </div>
         <ul>
           <li><NuxtLink to="/">Mon profil</NuxtLink></li>
-          <li><button class="">Me déconnecter</button></li>
+          <li><button class="" @click='logout()'>Me déconnecter</button></li>
         </ul>
       </div>
     </div>
@@ -116,11 +116,20 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data() {
     return {
-      isLogged: false
+      
     };
+  },
+  methods: {
+    logout(){
+      this.$store.commit('logout')
+    }
+  },
+  computed: {
+    ...mapGetters({islogged: 'getLog'})
   }
 };
 </script>

@@ -126,15 +126,13 @@ export default {
         axios
           .post(
             `http://localhost:3000/register`,
-            { email: this.user.email, password: this.user.password },
-            { withCredentials: true }
+            { email: this.user.email, password: this.user.password }
           )
           .then(response => {
             console.log(response.data);
             this.error = false;
             this.user.email_error = false;
             this.user.password_error = false;
-            //* STORE LE TOKEN SOLIMAN
             this.$router.push("/");
           })
           .catch(error => {
