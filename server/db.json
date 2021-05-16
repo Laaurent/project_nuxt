@@ -93,7 +93,7 @@
     },
     {
       "id": 2,
-      "name": "metal"
+      "name": "Hip-Hop"
     },
     {
       "id": 3,
@@ -123,46 +123,653 @@
   "artists": [
     {
       "id": 1,
-      "name": "Coldplay",
-      "country": "Great Britain",
-      "avatar": "https://upload.wikimedia.org/wikipedia/en/1/1d/Coldplay_shot_by_Marcus_Haney_01.png",
-      "genreId": 1,
-      "likes": 100310,
-      "description": "Il est formé par l'auteur-compositeur-interprète Chris Martin et le guitariste Jon Buckland. Le bassiste Guy Berryman rejoint ensuite le groupe, avant que le batteur Will Champion ne vienne compléter le quatuor."
+      "name": "Hamza",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwnipcjpeLoHXcIfl7wrMvBx47yIHojAu5jBg4MoBDw=s900-c-k-c0x00ffffff-no-rj",
+      "origin": "Belgique",
+      "genreId": [
+        3
+      ],
+      "likes": 20420,
+      "description": "Hamza, de son nom complet Hamza Al-Farissi3, né le 1er août 1994 en Belgique, est un rappeur, chanteur et beatmaker belge d’origine marocaine. Il est également connu pour son appartenance à la nouvelle vague du rap belge des années 2010 avec des artistes tels que Damso ou Shay4."
     },
     {
       "id": 2,
-      "name": "Tom misch",
-      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tom_Misch%2C_The_Novo%2C_April_2018_%28cropped%29.jpg/800px-Tom_Misch%2C_The_Novo%2C_April_2018_%28cropped%29.jpg",
-      "origin": "Great Britan",
-      "genreId": 8,
-      "likes": 1024,
-      "description": "Thomas Abraham Misch (born 25 June 1995) is an English musician and producer. He began releasing music on SoundCloud in 2012 and released his debut studio album Geography in 2018"
+      "name": "Alpha Wann",
+      "avatar": "https://images.genius.com/9eceb53405edce9e22267af62f7b2548.427x427x1.png",
+      "origin": "France",
+      "genreId": [
+        3
+      ],
+      "likes": 3456,
+      "description": "Alpha Omar Wann, dit Alpha Wann, né le 2 juillet 1989 dans le 14e arrondissement de Paris, est un rappeur (auteur-interprète) français. Il est membre de l'ancien groupe 1995 et du collectif L'Entourage."
     },
     {
       "id": 3,
       "name": "Damso",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Festival_des_Vieilles_Charrues_2018_-_Damso_-_006.jpg/800px-Festival_des_Vieilles_Charrues_2018_-_Damso_-_006.jpg",
       "origin": "Belgique",
-      "genreId": 3,
+      "genreId": [
+        3
+      ],
       "likes": 20420,
       "description": "Damso, de son vrai nom William Kalubi Mwamba, né le 10 mai 1992 à Kinshasa (Zaïre, actuelle République démocratique du Congo), est un rappeur et auteur-compositeur-interprète belgo-congolais."
+    },
+    {
+      "id": 4,
+      "name": "The Weeknd",
+      "avatar": "https://www.rollingstone.fr/RS-WP-magazine/wp-content/uploads/2020/02/THE-WEEKND-by-Duncan-Loudon-980x600.jpg",
+      "origin": "Canada",
+      "genreId": [
+        6,
+        2
+      ],
+      "likes": 120420,
+      "description": "The Weeknd, de son vrai nom Abel Makkonen Tesfaye, né le 16 février 1990 à Toronto, au Canada, est un auteur-compositeur-interprète, musicien et producteur canadien."
+    },
+    {
+      "id": 5,
+      "name": "PARTYNEXTDOOR",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/8/87/PartyNextDoor_2016_press_photo.png",
+      "origin": "Canada",
+      "genreId": [
+        6,
+        2
+      ],
+      "likes": 90420,
+      "description": "Jahron Anthony Brathwaite (né le 3 juillet 1993), plus connu sous le nom de scène PartyNextDoor (parfois stylisé PARTYNEXTDOOR), est un chanteur canadien natif de Mississauga en Ontario qui est signé sur le label OVO Sound de Drake. Il a réalisé son premier EP le 1er juin 2013 sous OVO Sound."
+    },
+    {
+      "id": 6,
+      "name": "Mac Miller",
+      "avatar": "https://i.guim.co.uk/img/media/d67ee6e706a6e2501f79f539fdbeabcdf4e34f94/93_0_2498_1500/master/2498.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=35f3cccb148d7ba75936b6416f110cb9",
+      "origin": "Amerique",
+      "genreId": [
+        3,
+        2
+      ],
+      "likes": 110420,
+      "description": "Mac Miller, nom de scène de Malcolm James McCormick, né le 19 janvier 1992 à Pittsburgh (Pennsylvanie) et mort le 7 septembre 2018 à Los Angeles (Californie) des suites d'une overdose, est un rappeur américain et producteur sous le nom de Larry Fisherman."
+    },
+    {
+      "id": 7,
+      "name": "Kaytranada",
+      "avatar": "https://groover.ca/wp-content/uploads/2020/12/kaytranada-2-sonar-bcn-2019.jpg",
+      "origin": "Kaïti",
+      "genreId": [
+        6,
+        2
+      ],
+      "likes": 70420,
+      "description": "Louis Kevin Celestin, né le 25 août 1992, mieux connu sous son nom de scène Kaytranada, est un musicien électronique canado-haïtien, producteur et DJ"
+    },
+    {
+      "id": 8,
+      "name": "Frank Ocean",
+      "avatar": "https://www.modzik.com/wp-content/uploads/2016/08/iamsu-frank-ocean-boys-dont-cry-00.jpg",
+      "origin": "Amerique",
+      "genreId": [
+        6,
+        2
+      ],
+      "likes": 220420,
+      "description": "Damso, de son vrai nom William Kalubi Mwamba, né le 10 mai 1992 à Kinshasa (Zaïre, actuelle République démocratique du Congo), est un rappeur et auteur-compositeur-interprète belgo-congolais.Christopher Francis Ocean, né Christopher Edwin Breaux3, le 28 octobre 1987 à Long Beach (Californie), plus connu sous son nom de scène Frank Ocean, est un auteur-compositeur-interprète américain."
+    },
+    {
+      "id": 9,
+      "name": "Tyler the Creator",
+      "avatar": "https://www.clique.tv/wp-content/uploads/2016/04/tyler-the-creator-golf-wang.jpg",
+      "origin": "Amerique",
+      "genreId": [
+        3,
+        2
+      ],
+      "likes": 320420,
+      "description": "Tyler, The Creator, de son vrai nom Tyler Gregory Okonma, né le 6 mars 1991 à Los Angeles, en Californie, est un rappeur, producteur de musique, acteur, designer, graphiste, réalisateur et scénariste américain."
+    },
+    {
+      "id": 10,
+      "name": "Drake",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Drake_and_Future_2016_Summer_Sixteen_Tour_%28cropped%29.jpg",
+      "origin": "Amerique",
+      "genreId": [
+        3,
+        2
+      ],
+      "likes": 920420,
+      "description": "Drake (/dɹeɪk/), de son vrai nom Aubrey Drake Graham, né le 24 octobre 1986 à Toronto, en Ontario, au Canada, est un rappeur-compositeur et acteur canadien. "
+    },
+    {
+      "id": 11,
+      "name": "Kanye West",
+      "avatar": "https://images.omerlocdn.com/resize?url=https%3A%2F%2Fgcm-v2.omerlocdn.com%2Fproduction%2Fglobal%2Ffiles%2Fimage%2Fa3502114-2af1-4bce-aae6-90e0dec4af72.jpg&stripmeta=true&width=1024&type=jpeg",
+      "origin": "Amerique",
+      "genreId": [
+        3,
+        2
+      ],
+      "likes": 20420,
+      "description": "Kanye West, de son nom complet Kanye Omari West /ˈkɑːnjeɪ wɛst/3, né le 8 juin 1977 à Atlanta, en Géorgie, est un rappeur, compositeur, réalisateur artistique, réalisateur et designer américain, originaire de Chicago, dans l'Illinois."
+    },
+    {
+      "id": 12,
+      "name": "Travis Scott",
+      "avatar": "https://img.20mn.fr/1mm-W3prTQifjD1mqVgMNA/830x532_rappeur-travis-scott.jpg",
+      "origin": "Amerique",
+      "genreId": [
+        3
+      ],
+      "likes": 910420,
+      "description": "Travis Scott, anciennement stylisé Travi$ Scott, de son vrai nom Jacques Berman Webster II, né le 30 avril 1992 à Houston au Texas, est un rappeur, chanteur, producteur, musicien, acteur, mannequin et réalisateur américain. Il est signé sur les labels Grand Hustle et Epic, ainsi que sur le label de Kanye West, GOOD Music, comme producteur."
+    },
+    {
+      "id": 13,
+      "name": "Kid Cudi",
+      "avatar": "https://cdn.radiofrance.fr/s3/cruiser-production/2020/10/b6597a1f-2a0c-4c28-8c05-819f3f5744b5/1200x680_kidcudi.jpg",
+      "origin": "Amerique",
+      "genreId": [
+        3,
+        2
+      ],
+      "likes": 140420,
+      "description": "Kid Cudi, parfois stylisé KiD CuDi, de son vrai nom Scott Ramon Seguro Mescudi, né le 30 janvier 1984 à Cleveland dans l'Ohio4, est un rappeur, chanteur, auteur-compositeur, réalisateur artistique, producteur musical et acteur américain. Il a été largement reconnu comme une influence sur plusieurs groupes hip hop et alternatifs contemporains."
     }
   ],
   "albums": [
     {
       "id": 1,
-      "name": "QALF",
-      "released": 2020,
-      "tracks": 15,
-      "artistId": 3
+      "name": "140 BPM 2",
+      "released": 2021,
+      "tracks": 13,
+      "artistId": 1,
+      "avatar": "https://www.musiqueurbaine.fr/wp-content/uploads/2021/01/21/hamza-2021-album-140-bpm-2.jpg"
     },
     {
       "id": 2,
-      "name": "Geography",
+      "name": "Santa Sauce 2",
+      "released": 2019,
+      "tracks": 13,
+      "artistId": 1,
+      "avatar": "https://www.thebackpackerz.com/wp-content/uploads/2020/01/hamza-santa-sauce-2-chronique.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Paradize",
+      "released": 2019,
+      "tracks": 17,
+      "artistId": 1,
+      "avatar": "https://www.thebackpackerz.com/wp-content/uploads/2019/03/hamza-paradise-chronique.jpg"
+    },
+    {
+      "id": 4,
+      "name": "1994",
+      "released": 2017,
+      "tracks": 14,
+      "artistId": 1,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/A1RFagh7-yL._SL1500_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Santa Sauce",
+      "released": 2017,
+      "tracks": 12,
+      "artistId": 1,
+      "avatar": "http://images.genius.com/7c8618c0e427f054d4fcceb40ea9bb1d.1000x1000x1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Zombie Life",
+      "released": 2016,
+      "tracks": 20,
+      "artistId": 1,
+      "avatar": "http://images.genius.com/74fff0afc1ec24f7b1ee560586528d88.1000x1000x1.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Don Dada mixtape vol 1",
+      "released": 2020,
+      "tracks": 17,
+      "artistId": 2,
+      "avatar": "https://m.media-amazon.com/images/I/91LrgiquvwL._SS500_.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Une Main Lave L'autre",
+      "released": 2018,
+      "tracks": 17,
+      "artistId": 2,
+      "avatar": "https://media.senscritique.com/media/000018018189/source_big/UNE_MAIN_LAVE_L_AUTRE.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Alph Lauren 3",
+      "released": 2018,
+      "tracks": 8,
+      "artistId": 2,
+      "avatar": "https://images.genius.com/7f06a1a11e31d192ab267423f1e2a625.600x600x1.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Alph Lauren 2",
+      "released": 2016,
+      "tracks": 8,
+      "artistId": 2,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61Be7g5N8pL._SL1200_.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Alph Lauren",
+      "released": 2014,
+      "tracks": 8,
+      "artistId": 2,
+      "avatar": "https://images.genius.com/2shiwl9si4xou9mroryw9cgat.480x480x1.jpg"
+    },
+    {
+      "id": 12,
+      "name": "QUALF Infinity",
+      "released": 2021,
+      "tracks": 25,
+      "artistId": 3,
+      "avatar": "https://images.genius.com/dedd2737025606423d012b43b3a3b9a0.1000x1000x1.jpg"
+    },
+    {
+      "id": 13,
+      "name": "QUALF",
+      "released": 2020,
+      "tracks": 14,
+      "artistId": 3,
+      "avatar": "https://images.genius.com/6fd31c8993a97f5851e5f9cfc7cbe5e8.1000x1000x1.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Lithopédion",
+      "released": 2018,
+      "tracks": 18,
+      "artistId": 3,
+      "avatar": "https://intrld.com/wp-content/uploads/2020/06/964251431db5dd72e987532c10e1bb04.1000x1000x1.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Ipséité",
+      "released": 2017,
+      "tracks": 14,
+      "artistId": 3,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/51kxhu%2BRm5L._SL1200_.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Batterie Faible",
+      "released": 2016,
+      "tracks": 11,
+      "artistId": 3,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/51Oa1XqhRbL._SL1500_.jpg"
+    },
+    {
+      "id": 17,
+      "name": "After Hours",
+      "released": 2020,
+      "tracks": 14,
+      "artistId": 4,
+      "avatar": "https://pbs.twimg.com/media/EYfFrFaXgAIGFMr.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Starboy",
+      "released": 2016,
+      "tracks": 18,
+      "artistId": 4,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/81pX%2BM-8cuL._SL1400_.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Beauty Behind the Madness",
+      "released": 2015,
+      "tracks": 14,
+      "artistId": 4,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71K19rihxhL._SL1200_.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Kiss Land",
+      "released": 2013,
+      "tracks": 10,
+      "artistId": 4,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/814PdZJQfeL._SL1400_.jpg"
+    },
+    {
+      "id": 21,
+      "name": "PARTYMOBILE",
+      "released": 2020,
+      "tracks": 15,
+      "artistId": 5,
+      "avatar": "https://images.genius.com/abfbca396d4856ed080442b19de5e180.924x924x1.jpg"
+    },
+    {
+      "id": 22,
+      "name": "PARTYNEXTDOOR 3",
+      "released": 2016,
+      "tracks": 16,
+      "artistId": 5,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61TBD2O8cPL._SL1432_.jpg"
+    },
+    {
+      "id": 23,
+      "name": "PARTYNEXTDOOR TWO",
+      "released": 2014,
+      "tracks": 12,
+      "artistId": 5,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61682X%2BrdBL._SL1425_.jpg"
+    },
+    {
+      "id": 24,
+      "name": "PARTYNEXTDOOR",
+      "released": 2013,
+      "tracks": 10,
+      "artistId": 5,
+      "avatar": "https://media.pitchfork.com/photos/5929a21fb1335d7bf169840d/1:1/w_600/222f293f.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Circles",
+      "released": 2020,
+      "tracks": 12,
+      "artistId": 6,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/51tqBxP5lNL._SL1200_.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Swimming",
       "released": 2018,
       "tracks": 13,
-      "artistId": 2
+      "artistId": 6,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61R58SHW%2BGL._SL1500_.jpg"
+    },
+    {
+      "id": 27,
+      "name": "The Devine Feminine",
+      "released": 2016,
+      "tracks": 10,
+      "artistId": 6,
+      "avatar": "https://www.thebackpackerz.com/wp-content/uploads/2016/09/Mac-Miller-The-Divine-Feminine-2016.jpg"
+    },
+    {
+      "id": 28,
+      "name": "GO:OD AM",
+      "released": 2015,
+      "tracks": 17,
+      "artistId": 6,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71o7tpFSWXL._SL1500_.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Watching Movies With The Sound Off",
+      "released": 2013,
+      "tracks": 19,
+      "artistId": 6,
+      "avatar": "https://static.qobuz.com/images/covers/8a/pq/mls1fiq0ypq8a_600.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Blue Side Park",
+      "released": 2011,
+      "tracks": 16,
+      "artistId": 6,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71uQHGg%2B-QL._SL1211_.jpg"
+    },
+    {
+      "id": 31,
+      "name": "BUBBA",
+      "released": 2019,
+      "tracks": 17,
+      "artistId": 7,
+      "avatar": "https://www.thebackpackerz.com/wp-content/uploads/2019/12/nouvel-album-kaytranada-bubba-cover.png"
+    },
+    {
+      "id": 32,
+      "name": "99.9%",
+      "released": 2016,
+      "tracks": 15,
+      "artistId": 7,
+      "avatar": "https://lesoreillescurieuses.files.wordpress.com/2016/05/999.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Kaytra To Do",
+      "released": 2013,
+      "tracks": 8,
+      "artistId": 7,
+      "avatar": "https://cdns-images.dzcdn.net/images/cover/aaeb8541cc318228414b2071e44f262d/500x500.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Blonde",
+      "released": 2016,
+      "tracks": 17,
+      "artistId": 8,
+      "avatar": "https://lecanalauditif.ca/wp-content/uploads/2018/01/frank-ocean-blond-compressed-0933daea-f052-40e5-85a4-35e07dac73df.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Channel ORANGE",
+      "released": 2012,
+      "tracks": 17,
+      "artistId": 8,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/51vGncnu2uL._SL1417_.jpg"
+    },
+    {
+      "id": 36,
+      "name": "IGOR",
+      "released": 2019,
+      "tracks": 12,
+      "artistId": 9,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71udX8iRBsL._SL1200_.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Flower Boy",
+      "released": 2017,
+      "tracks": 14,
+      "artistId": 9,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/81W3TZBkF1L._SL1200_.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Cherry Bomb",
+      "released": 2015,
+      "tracks": 13,
+      "artistId": 9,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/91aVF4ZdMPL._AC_SL1500_.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Dark Lane Demo Tapes",
+      "released": 2020,
+      "tracks": 14,
+      "artistId": 10,
+      "avatar": "https://img.discogs.com/3CKpbLgTKeDcaPaB-N81Gxac4Ts=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-16556916-1608475102-3053.jpeg.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Scorpion",
+      "released": 2018,
+      "tracks": 25,
+      "artistId": 10,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61rwDWld0yL._SL1200_.jpg"
+    },
+    {
+      "id": 41,
+      "name": "More Life",
+      "released": 2017,
+      "tracks": 22,
+      "artistId": 10,
+      "avatar": "https://static.qobuz.com/images/covers/40/79/0060255757940_600.jpg"
+    },
+    {
+      "id": 42,
+      "name": "Views",
+      "released": 2016,
+      "tracks": 20,
+      "artistId": 10,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71fXWX04klL._SY450_.jpg"
+    },
+    {
+      "id": 43,
+      "name": "If You're Reading This It's Too Late",
+      "released": 2015,
+      "tracks": 17,
+      "artistId": 10,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71xNOkPaOHL._SL1400_.jpg"
+    },
+    {
+      "id": 44,
+      "name": "Nothing Was The Same",
+      "released": 2013,
+      "tracks": 16,
+      "artistId": 10,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71TRfYUtDLL._SL1500_.jpg"
+    },
+    {
+      "id": 45,
+      "name": "Jesus Is God",
+      "released": 2019,
+      "tracks": 11,
+      "artistId": 11,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61Ptk7IYKDL._SL1400_.jpg"
+    },
+    {
+      "id": 46,
+      "name": "YE",
+      "released": 2018,
+      "tracks": 5,
+      "artistId": 11,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61PVfWgtwSL._SL1200_.jpg"
+    },
+    {
+      "id": 47,
+      "name": "The Life Of Pablo",
+      "released": 2016,
+      "tracks": 20,
+      "artistId": 11,
+      "avatar": "https://lh3.googleusercontent.com/proxy/1Hxp5D4y8XM4suYmU7K8zuo-mq5C22OcFqFzyRfZkmsImTuOj3m8YvkqI4-BvESIs9ozo5gEp9BtqbttqpE-fNIQ_hpwV3GXjJXaA8DRLelA47sJJYzhcgL94SKTi_C6l2r7Haimgct1lRCfWbwuFaim1E3AmxL4HKE"
+    },
+    {
+      "id": 48,
+      "name": "YEEZUS",
+      "released": 2013,
+      "tracks": 10,
+      "artistId": 11,
+      "avatar": "https://i.pinimg.com/originals/c7/e3/b7/c7e3b7d754cd5acc7809e1d245c0f687.jpg"
+    },
+    {
+      "id": 49,
+      "name": "My Beautiful Dark Twited Fantasy",
+      "released": 2010,
+      "tracks": 13,
+      "artistId": 11,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/71EYmWxcmdL._SX466_.jpg"
+    },
+    {
+      "id": 50,
+      "name": "808s & Hearthbreak",
+      "released": 2008,
+      "tracks": 12,
+      "artistId": 11,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/51v8Vm3ij3L._SL1200_.jpg"
+    },
+    {
+      "id": 51,
+      "name": "Graduation",
+      "released": 2007,
+      "tracks": 13,
+      "artistId": 11,
+      "avatar": "https://m.media-amazon.com/images/I/715gHCdVevL._SS500_.jpg"
+    },
+    {
+      "id": 52,
+      "name": "Late Registration",
+      "released": 2005,
+      "tracks": 21,
+      "artistId": 11,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61vUslTEbFL._SL1200_.jpg"
+    },
+    {
+      "id": 53,
+      "name": "The College Dropout",
+      "released": 2004,
+      "tracks": 21,
+      "artistId": 11,
+      "avatar": "https://m.media-amazon.com/images/I/81gblK-BoIL._SS500_.jpg"
+    },
+    {
+      "id": 54,
+      "name": "JACKBOYS",
+      "released": 2019,
+      "tracks": 7,
+      "artistId": 12,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/81iAiTV0o4L._SL1500_.jpg"
+    },
+    {
+      "id": 55,
+      "name": "ASTROWORLD",
+      "released": 2018,
+      "tracks": 17,
+      "artistId": 12,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/81hMEx3kLqL._SL1200_.jpg"
+    },
+    {
+      "id": 56,
+      "name": "Birds In The Trap Sing McKnight ",
+      "released": 2016,
+      "tracks": 14,
+      "artistId": 12,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/810sB9JjELL._SL1500_.jpg"
+    },
+    {
+      "id": 57,
+      "name": "Rodeo",
+      "released": 2015,
+      "tracks": 16,
+      "artistId": 12,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/61dVdX2bgIL._SL1000_.jpg"
+    },
+    {
+      "id": 58,
+      "name": "Man On The Moon III: The Chosen",
+      "released": 2020,
+      "tracks": 18,
+      "artistId": 12,
+      "avatar": "https://static.qobuz.com/images/covers/0b/gn/lp879zmbjgn0b_600.jpg"
+    },
+    {
+      "id": 59,
+      "name": "Speedin' Bullet 2 Heaven",
+      "released": 2015,
+      "tracks": 26,
+      "artistId": 12,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/A1WEly1evVL._SL1500_.jpg"
+    },
+    {
+      "id": 60,
+      "name": "Indicut",
+      "released": 2013,
+      "tracks": 18,
+      "artistId": 12,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/91f4pJWeVzL._SL1500_.jpg"
+    },
+    {
+      "id": 61,
+      "name": "Man On The Moon II: The Legend Of Mr. Rager",
+      "released": 2010,
+      "tracks": 17,
+      "artistId": 12,
+      "avatar": "https://images-na.ssl-images-amazon.com/images/I/81OPlzQ2cwL._SL1400_.jpg"
+    },
+    {
+      "id": 62,
+      "name": "Man On The Moon I: The End Of Day",
+      "released": 2009,
+      "tracks": 19,
+      "artistId": 12,
+      "avatar": "https://www.freshnessmag.com/.image/t_share/MTM3OTI3MjcxMTI4OTY3MDIw/kid-cudi-man-on-the-moon-cover-1.jpg"
     }
   ],
   "concerts": [

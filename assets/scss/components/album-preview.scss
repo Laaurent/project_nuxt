@@ -1,0 +1,22 @@
+.albums_div{
+    position: relative;
+}
+.albums_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.albums_buttons{
+    flex-wrap: wrap;
+    position: absolute;
+    height: 160px;
+    width: calc(100% + 40px);
+    top:0;
+    left: -20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    button{
+        margin: 0;
+    }
+}

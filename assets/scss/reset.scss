@@ -13,12 +13,19 @@ h2 {
   font-style: normal;
 }
 h3 {
+  font-size: 32px;
   color: $black;
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 }
 h4 {
+  color: $black;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+h5 {
   color: $primary;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -64,4 +71,11 @@ ul {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+@media (max-width: 1023px) {
+  .main {
+    min-height: 77vh;
+    margin: 80px 40px;
+  }
 }

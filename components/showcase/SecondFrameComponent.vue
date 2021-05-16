@@ -5,8 +5,8 @@
         class="img"
         :style="
           'background-image : url(' +
-            news[index].img +
-            '), linear-gradient(#fefff8 50%, #140c3d) '
+          news[index].img +
+          '), linear-gradient(#fefff8 50%, #140c3d) '
         "
       >
         <div class="button_swipe_div">
@@ -20,7 +20,7 @@
       </div>
       <div class="text">
         <div>
-          <h2>{{ news[index].title }}</h2>
+          <h3>{{ news[index].title }}</h3>
           <p class="secondary">
             <i class="far fa-calendar-alt"></i> {{ news[index].published }}
           </p>
@@ -41,7 +41,7 @@ export default {
   props: ["news"],
   data() {
     return {
-      index: 0
+      index: 0,
     };
   },
   methods: {
@@ -52,8 +52,8 @@ export default {
       if (side == "right") {
         this.index = this.index == this.news.length - 1 ? 0 : this.index + 1;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

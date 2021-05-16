@@ -1,0 +1,15 @@
+.badge_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 64px;
+    margin-right: 4px ;
+    border-radius: 0.35em;
+    color: rgba($color: $black, $alpha: 0.6);
+    p{
+        margin: 0 8px;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: 900;
+    }
+}

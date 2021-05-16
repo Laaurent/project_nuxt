@@ -10,7 +10,7 @@
           suscipit ratione corporis fugiat ea.
         </p>
       </div>
-      <h3>Daily MEWS</h3>
+      <h4>Daily MEWS</h4>
       <div class="head_news">
         <ul>
           <li v-for="(item, index) in last_news" :key="index">

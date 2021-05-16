@@ -1,0 +1,90 @@
+<template>
+  <div class="main">
+    <!--  {{ artist }} -->
+    <div class="details_card" v-if="artist">
+      <div class="details_wrapper">
+        <div class="details_header">
+          <div
+            class="artist_avatar"
+            :style="
+              'background-image: url(' +
+              artist.avatar +
+              '), linear-gradient(#fefff8 50%, #140c3d) '
+            "
+          ></div>
+          <div class="artist_info">
+            <div class="artist_title">
+              <h3>{{ artist.name }}</h3>
+              <div class="badges_div">
+                <BadgeComponent
+                  v-for="(genre, index) in artist.genres"
+                  :key="index"
+                  :data="genre"
+                />
+              </div>
+            </div>
+            <div class="artiste_interect">
+              <button>
+                j'aime
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="details_main">{{ artist.concerts }}</div>
+        <div class="details_footer">
+          <AlbumsPreviewComponent :albums="artist.albums" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+import BadgeComponent from "../../components/BadgeComponent.vue";
+import AlbumsPreviewComponent from "../../components/AlbumsPreviewComponent.vue";
+export default {
+  components: { BadgeComponent, AlbumsPreviewComponent },
+  data() {
+    return {
+      artist: {},
+    };
+  },
+  mounted() {
+    axios
+      .get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
+      .then((response) => response.data[0])
+      .then((respArtist) => {
+        //GENRES
+        let reqGenres = axios
+          .get(
+            `http://localhost:3000/genres?id=${respArtist.genreId.join("&id=")}`
+          )
+          .then((respGenre) => respGenre.data.map((genre) => genre.name))
+          .then((respGenreData) => {
+            respArtist.genres = respGenreData;
+          });
+        //CONCERTS
+        let reqConcerts = axios
+          .get(`http://localhost:3000/concerts?artistId=${respArtist.id}`)
+          .then((respConcert) => {
+            respArtist.concerts = respConcert.data;
+          });
+        //ALBUMS
+        let reqAlbums = axios
+          .get(`http://localhost:3000/albums?artistId=${respArtist.id}`)
+          .then((respAlbums) => {
+            respArtist.albums = respAlbums.data;
+          });
+
+        Promise.all([reqGenres, reqConcerts, reqAlbums]).then((response) => {
+          this.artist = respArtist;
+        });
+      });
+  },
+};
+</script>
+
+<style>
+</style>

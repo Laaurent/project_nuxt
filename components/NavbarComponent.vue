@@ -98,7 +98,7 @@
         </li>
       </ul>
     </div>
-    <div class="avatarDiv" v-if="islogged">
+    <!-- <div class="avatarDiv" v-if="is_logged">
       <div class="avatarMenu">
         <div class="avatarPreview">
           <div
@@ -111,7 +111,7 @@
           <li><button class="" @click='logout()'>Me déconnecter</button></li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
