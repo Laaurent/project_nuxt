@@ -31,7 +31,12 @@
             </div>
           </div>
         </div>
-        <div class="details_main">{{ artist.concerts }}</div>
+        <div class="details_main">
+          <div class="details_news"></div>
+          <div class="details concerts">
+            <ConcertsComponent :concerts="artist.concerts" />
+          </div>
+        </div>
         <div class="details_footer">
           <AlbumsPreviewComponent :albums="artist.albums" />
         </div>
@@ -44,8 +49,9 @@
 import axios from "axios";
 import BadgeComponent from "../../components/BadgeComponent.vue";
 import AlbumsPreviewComponent from "../../components/AlbumsPreviewComponent.vue";
+import ConcertsComponent from "../../components/ConcertsComponent.vue";
 export default {
-  components: { BadgeComponent, AlbumsPreviewComponent },
+  components: { BadgeComponent, AlbumsPreviewComponent, ConcertsComponent },
   data() {
     return {
       artist: {},
@@ -69,6 +75,12 @@ export default {
         let reqConcerts = axios
           .get(`http://localhost:3000/concerts?artistId=${respArtist.id}`)
           .then((respConcert) => {
+            respConcert.data.forEach((element) => {
+              let date = element.dates.split("/");
+              let formated = new Date(date[2], date[1] - 1, date[0]);
+              element.dates = formated;
+              console.log(formated);
+            });
             respArtist.concerts = respConcert.data;
           });
         //ALBUMS

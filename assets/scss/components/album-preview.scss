@@ -4,7 +4,8 @@
 .albums_wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: space-around;
 }
 .albums_buttons{
     flex-wrap: wrap;

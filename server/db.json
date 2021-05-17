@@ -775,20 +775,20 @@
   "concerts": [
     {
       "id": 1,
-      "name": "Paris Bercy",
-      "date": "10/12/2019",
+      "title": "Paris Bercy",
+      "dates": "10/12/2021",
       "artistId": 3
     },
     {
       "id": 2,
-      "name": "Olympia",
-      "date": "10/12/2018",
+      "title": "Olympia",
+      "dates": "10/12/2021",
       "artistId": 3
     },
     {
       "id": 1,
-      "name": "O2 Academy Manchester",
-      "date": "10/12/2018",
+      "title": "O2 Academy Manchester",
+      "dates": "10/12/2021",
       "artistId": 2
     }
   ]

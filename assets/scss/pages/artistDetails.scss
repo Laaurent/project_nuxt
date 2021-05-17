@@ -47,6 +47,12 @@
                 }
             }
         }
+        .details_main{
+            display: flex;
+            div{
+                flex: 1;
+            }
+        }
         .details_footer{
             /* background-color: bisque; */
             width: 100%;
