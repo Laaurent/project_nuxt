@@ -8,8 +8,8 @@
             class="artist_avatar"
             :style="
               'background-image: url(' +
-              artist.avatar +
-              '), linear-gradient(#fefff8 50%, #140c3d) '
+                artist.avatar +
+                '), linear-gradient(#fefff8 50%, #140c3d) '
             "
           ></div>
           <div class="artist_info">
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="details_main">
-          <div class="details_news"></div>
+          <div class="details_news">{{ artist.concerts }}</div>
           <div class="details concerts">
             <ConcertsComponent :concerts="artist.concerts" />
           </div>
@@ -54,29 +54,30 @@ export default {
   components: { BadgeComponent, AlbumsPreviewComponent, ConcertsComponent },
   data() {
     return {
-      artist: {},
+      artist: {}
     };
   },
   mounted() {
     axios
       .get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
-      .then((response) => response.data[0])
-      .then((respArtist) => {
+      .then(response => response.data[0])
+      .then(respArtist => {
         //GENRES
         let reqGenres = axios
           .get(
             `http://localhost:3000/genres?id=${respArtist.genreId.join("&id=")}`
           )
-          .then((respGenre) => respGenre.data.map((genre) => genre.name))
-          .then((respGenreData) => {
+          .then(respGenre => respGenre.data.map(genre => genre.name))
+          .then(respGenreData => {
             respArtist.genres = respGenreData;
           });
         //CONCERTS
         let reqConcerts = axios
           .get(`http://localhost:3000/concerts?artistId=${respArtist.id}`)
-          .then((respConcert) => {
-            respConcert.data.forEach((element) => {
+          .then(respConcert => {
+            respConcert.data.forEach(element => {
               let date = element.dates.split("/");
+              console.log(date);
               let formated = new Date(date[2], date[1] - 1, date[0]);
               element.dates = formated;
               console.log(formated);
@@ -86,17 +87,16 @@ export default {
         //ALBUMS
         let reqAlbums = axios
           .get(`http://localhost:3000/albums?artistId=${respArtist.id}`)
-          .then((respAlbums) => {
+          .then(respAlbums => {
             respArtist.albums = respAlbums.data;
           });
 
-        Promise.all([reqGenres, reqConcerts, reqAlbums]).then((response) => {
+        Promise.all([reqGenres, reqConcerts, reqAlbums]).then(response => {
           this.artist = respArtist;
         });
       });
-  },
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>
