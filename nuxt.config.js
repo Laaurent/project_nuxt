@@ -40,7 +40,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/style-resources", "@nuxtjs/auth", "@nuxtjs/axios"],
+  modules: ["@nuxtjs/style-resources", "@nuxtjs/axios"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -57,24 +57,10 @@ export default {
   axios: {
     baseURL: 'http://localhost:3000/'
   },
-  auth: {
-    localStorage: false,
-    cookie: {
-      prefix: 'auth.',
-      options: {
-        path: '/',
-        maxAge: 10800
-      }
-    },
-    strategies: {
-      local: {
-        endpoints: {
-          login: { url: 'login', method: 'post', propertyName: 'access_token' },
-          user: { url: 'me', method: 'get', propertyName: 'content' },
-          logout: false
-        }
-      }
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true
     }
-  },
-
+  }
 }

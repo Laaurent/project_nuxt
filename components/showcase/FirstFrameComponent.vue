@@ -13,7 +13,7 @@
       <h4>Daily MEWS</h4>
       <div class="head_news">
         <ul>
-          <li v-for="(item, index) in news" :key="index">
+          <li v-for="(item, index) in last_news" :key="index">
             <button class="item_news">
               <div>
                 <h4>{{ item.title }}</h4>
@@ -30,6 +30,17 @@
 <script>
 export default {
   props: ["news"],
+  data(){
+    return {
+      last_news: null
+    }
+  },
+  mounted() {
+    let array_tmp;
+      array_tmp = [...this.news];
+      this.last_news =  array_tmp.sort((a, b) => new Date(a.published) - new Date(b.published))
+        .slice(0, 3);
+   }
 };
 </script>
 

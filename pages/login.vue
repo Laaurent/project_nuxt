@@ -51,6 +51,7 @@
 
 <script>
 import axios from "axios";
+import {mapActions} from 'vuex'
 
 export default {
   layout: "pageOnly",
@@ -90,14 +91,15 @@ export default {
         this.user.password_error = true;
       }
       if (!this.user.password_error && !this.user.email_error) {
-        axios
-          .post(
-            `http://localhost:3000/login`,
-            { email: this.user.email, password: this.user.password },
-            { withCredentials: true }
-          )
+        // axios
+        //   .post(
+        //     `http://localhost:3000/login`,
+        //     { email: this.user.email, password: this.user.password },
+        //     { withCredentials: true }
+        //   )
+        this.$store.dispatch('login', this.user)
           .then(response => {
-            console.log(response.data);
+            console.log(response);
             this.error = false;
             this.user.email_error = false;
             this.user.password_error = false;
@@ -105,7 +107,7 @@ export default {
             this.$router.push("/");
           })
           .catch(error => {
-            console.error(error.response.data);
+            console.error(error.response);
             this.error = true;
           });
       }
