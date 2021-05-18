@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="details_main">
-          <div class="details_news">
+          <div class="details_description">
             <p class="artist_description">{{ artist.description }}</p>
           </div>
           <div class="details concerts">

@@ -60,6 +60,12 @@
       div {
         flex: 1;
       }
+      .details_description {
+        .artist_description {
+          padding: 64px 64px 64px 0;
+          text-justify: inter-character;
+        }
+      }
     }
     .details_footer {
       /* background-color: bisque; */
