@@ -9,7 +9,7 @@
     margin-top: 160px;
     .details_header {
       position: relative;
-      top: -162px;
+      top: -150px;
       /* height: 80px; */
       width: 100%;
       /* background-color: beige; */
@@ -33,9 +33,19 @@
         justify-content: space-between;
         .artist_title {
           margin-left: 32px;
-          h3 {
-            font-size: 48px;
-            font-weight: 900;
+          margin-bottom: 36px;
+          .artist_title_wrapper {
+            display: flex;
+            align-items: center;
+            h3 {
+              font-size: 48px;
+              font-weight: 900;
+              margin: 0;
+            }
+            img {
+              vertical-align: middle;
+              margin: 0 16px;
+            }
           }
         }
         button {

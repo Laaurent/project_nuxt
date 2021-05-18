@@ -13,11 +13,12 @@
           <div class="flex-grow overflow-y-auto overflow-x-auto">
             <p
               :class="attr.customData.place"
-              class="vc-day-info"
+              class="vc-day-info tooltip"
               v-for="attr in attributes"
               :key="attr.key"
             >
               {{ attr.customData.title }}
+              <TooltipComponent :text="attr.customData.title" />
             </p>
           </div>
         </div>
@@ -27,7 +28,9 @@
 </template>
 
 <script>
+import tooltipComponent from "./tooltipComponent.vue";
 export default {
+  components: { tooltipComponent },
   props: ["concerts"],
   data() {
     const month = new Date().getMonth();

@@ -14,7 +14,17 @@
           ></div>
           <div class="artist_info">
             <div class="artist_title">
-              <h3>{{ artist.name }}</h3>
+              <div class="artist_title_wrapper">
+                <h3>
+                  {{ artist.name }}
+                </h3>
+                <img
+                  :src="'https://flagcdn.com/h20/' + artist.origin + '.png'"
+                  height="20"
+                  :alt="artist.origin"
+                />
+              </div>
+
               <div class="badges_div">
                 <BadgeComponent
                   v-for="(genre, index) in artist.genres"
@@ -32,7 +42,9 @@
           </div>
         </div>
         <div class="details_main">
-          <div class="details_news">{{ artist.concerts }}</div>
+          <div class="details_news">
+            <p class="artist_description">{{ artist.description }}</p>
+          </div>
           <div class="details concerts">
             <ConcertsComponent :concerts="artist.concerts" />
           </div>
@@ -77,10 +89,8 @@ export default {
           .then(respConcert => {
             respConcert.data.forEach(element => {
               let date = element.dates.split("/");
-              console.log(date);
               let formated = new Date(date[2], date[1] - 1, date[0]);
               element.dates = formated;
-              console.log(formated);
             });
             respArtist.concerts = respConcert.data;
           });
