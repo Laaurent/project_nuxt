@@ -84,7 +84,7 @@
     width: 240px;
     height: auto;
     text-align: center;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     .avatarMenu {
       /*   margin: 16px; */
       display: flex;
@@ -108,7 +108,7 @@
       }
       ul {
         margin: 24px 0;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.3s ease-in-out;
         opacity: 0;
         height: 0;
         overflow: hidden;
