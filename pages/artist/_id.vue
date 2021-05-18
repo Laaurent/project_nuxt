@@ -19,6 +19,7 @@
                   {{ artist.name }}
                 </h3>
                 <img
+                  v-if="artist.origin"
                   :src="'https://flagcdn.com/h20/' + artist.origin + '.png'"
                   height="20"
                   :alt="artist.origin"
