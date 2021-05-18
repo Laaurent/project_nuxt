@@ -40,24 +40,23 @@ export default {
   data() {
     return {
       left: 0,
-      right: 10,
+      right: 6
     };
   },
   computed: {
-    length: function () {
+    length: function() {
       if (this.albums) {
         if (this.albums.length < this.right) this.right = this.albums.length;
         return this.albums.length;
       }
     },
-    albumsPreview: function () {
+    albumsPreview: function() {
       if (this.albums && this.length) {
         return this.albums.slice(this.left, this.right);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>

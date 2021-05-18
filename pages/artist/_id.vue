@@ -8,13 +8,23 @@
             class="artist_avatar"
             :style="
               'background-image: url(' +
-              artist.avatar +
-              '), linear-gradient(#fefff8 50%, #140c3d) '
+                artist.avatar +
+                '), linear-gradient(#fefff8 50%, #140c3d) '
             "
           ></div>
           <div class="artist_info">
             <div class="artist_title">
-              <h3>{{ artist.name }}</h3>
+              <div class="artist_title_wrapper">
+                <h3>
+                  {{ artist.name }}
+                </h3>
+                <img
+                  :src="'https://flagcdn.com/h20/' + artist.origin + '.png'"
+                  height="20"
+                  :alt="artist.origin"
+                />
+              </div>
+
               <div class="badges_div">
                 <BadgeComponent
                   v-for="(genre, index) in artist.genres"
@@ -31,7 +41,14 @@
             </div>
           </div>
         </div>
-        <div class="details_main">{{ artist.concerts }}</div>
+        <div class="details_main">
+          <div class="details_news">
+            <p class="artist_description">{{ artist.description }}</p>
+          </div>
+          <div class="details concerts">
+            <ConcertsComponent :concerts="artist.concerts" />
+          </div>
+        </div>
         <div class="details_footer">
           <AlbumsPreviewComponent :albums="artist.albums" />
         </div>
@@ -44,47 +61,52 @@
 import axios from "axios";
 import BadgeComponent from "../../components/BadgeComponent.vue";
 import AlbumsPreviewComponent from "../../components/AlbumsPreviewComponent.vue";
+import ConcertsComponent from "../../components/ConcertsComponent.vue";
 export default {
-  components: { BadgeComponent, AlbumsPreviewComponent },
+  components: { BadgeComponent, AlbumsPreviewComponent, ConcertsComponent },
   data() {
     return {
-      artist: {},
+      artist: {}
     };
   },
   mounted() {
     axios
       .get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
-      .then((response) => response.data[0])
-      .then((respArtist) => {
+      .then(response => response.data[0])
+      .then(respArtist => {
         //GENRES
         let reqGenres = axios
           .get(
             `http://localhost:3000/genres?id=${respArtist.genreId.join("&id=")}`
           )
-          .then((respGenre) => respGenre.data.map((genre) => genre.name))
-          .then((respGenreData) => {
+          .then(respGenre => respGenre.data.map(genre => genre.name))
+          .then(respGenreData => {
             respArtist.genres = respGenreData;
           });
         //CONCERTS
         let reqConcerts = axios
           .get(`http://localhost:3000/concerts?artistId=${respArtist.id}`)
-          .then((respConcert) => {
+          .then(respConcert => {
+            respConcert.data.forEach(element => {
+              let date = element.dates.split("/");
+              let formated = new Date(date[2], date[1] - 1, date[0]);
+              element.dates = formated;
+            });
             respArtist.concerts = respConcert.data;
           });
         //ALBUMS
         let reqAlbums = axios
           .get(`http://localhost:3000/albums?artistId=${respArtist.id}`)
-          .then((respAlbums) => {
+          .then(respAlbums => {
             respArtist.albums = respAlbums.data;
           });
 
-        Promise.all([reqGenres, reqConcerts, reqAlbums]).then((response) => {
+        Promise.all([reqGenres, reqConcerts, reqAlbums]).then(response => {
           this.artist = respArtist;
         });
       });
-  },
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>

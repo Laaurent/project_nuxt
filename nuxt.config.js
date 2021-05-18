@@ -19,7 +19,7 @@ export default {
         rel: 'stylesheet', href: 'https://use.typekit.net/sbl0zfx.css'
       },
       {
-        rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', integrity:'sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk', crossorigin:'anonymous'
+        rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', integrity: 'sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk', crossorigin: 'anonymous'
       }
     ],
 
@@ -29,7 +29,9 @@ export default {
   css: ["~/assets/scss/all.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '~plugins/v-calendar.js', ssr: false }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

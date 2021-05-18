@@ -1,0 +1,45 @@
+.custom-calendar {
+  border: none !important;
+  border-radius: 1em !important;
+}
+
+.vc-pane-container {
+  height: 520px;
+}
+
+.vc-day {
+  padding: 16px 0;
+  min-height: 72px !important;
+}
+.flex-grow {
+  display: flex;
+  justify-content: center;
+}
+
+.vc-day-info {
+  margin: 8px 0 0 0;
+  border-radius: 1em;
+  color: $white;
+  padding: 4px 8px;
+  width: 80px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  /* height: 32px; */
+}
+.vc-arrow:hover {
+  background: none !important;
+  svg > path {
+    fill: $primary;
+  }
+}
+
+.Paris {
+  background-color: $primary;
+}
+.Lyon {
+  background-color: $secondary;
+}
+/* .vc-header {
+  background-color: $primary;
+} */
