@@ -28,7 +28,7 @@
             {{ news[index].content }}
           </p>
         </div>
-        <button class="button_icon">
+        <button class="button_icon" @click="redirectToRoute(news[index].id)">
           En savoir plus <i class="fas fa-chevron-right"></i>
         </button>
       </div>
@@ -45,6 +45,9 @@ export default {
     };
   },
   methods: {
+    redirectToRoute: function (id) {
+      window.location.href = "/new/" + id;
+    },
     getNews(side) {
       if (side == "left") {
         this.index = this.index == 0 ? this.news.length - 1 : this.index - 1;

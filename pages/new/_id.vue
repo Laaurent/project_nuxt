@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <div class="details_card" v-if="news">
-      {{ news }}
+    <div class="details_card" v-if="new_item">
+      {{ new_item }}
     </div>
   </div>
 </template>
@@ -11,14 +11,14 @@ import axios from "axios";
 export default {
   data() {
     return {
-      news: undefined,
+      new_item: undefined,
     };
   },
   mounted() {
     axios
-      .get(`http://localhost:3000/news`)
+      .get(`http://localhost:3000/news?id=${this.$nuxt.$route.params.id}`)
       .then((response) => {
-        this.news = response.data;
+        this.new_item = response.data[0];
       })
       .catch((error) => {
         console.error(error);
