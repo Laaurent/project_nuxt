@@ -1,28 +1,28 @@
 h1 {
   color: $primary;
   font-size: 45px;
-  font-family: ohno-blazeface, sans-serif;
-  font-weight: 400;
+  /* font-family: ohno-blazeface, sans-serif; */
+  font-weight: 900;
   font-style: normal;
 }
 h2 {
   color: $secondary;
   font-size: 40px;
-  font-family: ohno-blazeface, sans-serif;
-  font-weight: 400;
+  /* font-family: ohno-blazeface, sans-serif; */
+  font-weight: 800;
   font-style: normal;
 }
 h3 {
   font-size: 32px;
   color: $black;
-  text-transform: uppercase;
-  font-weight: 900;
+  /* text-transform: uppercase; */
+  font-weight: 800;
   letter-spacing: 5px;
 }
 h4 {
   color: $black;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 h5 {
@@ -51,6 +51,7 @@ p.secondary {
 html {
 }
 body {
+  font-size: 12px;
   font-family: "Montserrat";
   color: $black;
   background-color: $white;
