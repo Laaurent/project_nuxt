@@ -59,12 +59,12 @@ input[type="submit"] {
   background-color: $primary;
   color: $white;
   border-radius: 0.5em;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 button:hover,
 input[type="submit"]:hover {
   background-color: $secondary;
-  box-shadow: 0px 8px 16px rgba($color: $secondary, $alpha: 0.5);
+  box-shadow: 0px 4px 4px rgba($color: $secondary, $alpha: 0.5);
   transform: scale(0.98);
 }
 
