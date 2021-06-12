@@ -1,6 +1,5 @@
 .new_wrapper {
-  border: 1px solid $black;
-  margin: 8px 0;
+  margin: 16px 0;
   height: 180px;
   display: flex;
   width: 100%;
@@ -17,8 +16,12 @@
   }
   .new_text {
     flex: 3;
+    text-align: justify;
     align-self: center;
     width: auto;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
     h4,
     h5 {
       display: inline;
