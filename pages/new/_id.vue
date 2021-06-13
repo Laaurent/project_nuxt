@@ -2,15 +2,16 @@
   <div class="main">
     <div class="details_card" v-if="new_item">
       <div class="details_wrapper">
-        <div class="details_header">
-          <div><h1>{{ new_item.title}}</h1></div>
-          <div><h3>{{new_item.published}}</h3></div>
+        <div>
+          <img :src="new_item.img" alt="news_image">
         </div>
-      <div><img :src="new_item.img" alt="news_image"><p>{{ new_item.content }}</p></div>
-      
-      {{ new_item }}
-      </div>
+        <div class="article_wrapper">
+          <h1>{{ new_item.title}}</h1>
+          <p id="content">{{ new_item.content }}</p>
+          <p id="published">{{new_item.published}}</p>
+        </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -35,4 +36,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>
