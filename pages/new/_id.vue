@@ -14,6 +14,9 @@
             j'aime
             <i class="far fa-heart"></i>
           </button>
+          <button class="" @click="deleteNews($nuxt.$route.params.id)">
+            Delete <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
         </div>
          
@@ -40,6 +43,19 @@ export default {
       .catch(error => {
         console.error(error);
       });
+  },
+  methods: {
+    async deleteNews(id){
+      // return new Promise((resolve, reject) => {
+      //   let truc = this.$store.dispatch('db/deleteNews',id);
+      //   console.log(truc)
+      //   if (truc) {
+      //     resolve(res => this.$router.push('/news'))
+      //   }
+      // })
+      await this.$store.dispatch('db/deleteNews',id);
+      this.$router.push('/news');
+    }
   }
 };
 </script>

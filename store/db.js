@@ -24,5 +24,14 @@ export const state = () => ({
         .catch(error => {
         console.error(error.response);
         });
+    },
+    deleteNews(context, payload){
+      return axios.delete(`http://localhost:3000/news/${payload}`)
+      .then(response => {
+        console.log("C'est bien delete !!!!!!!!!!!!")
+      })
+      .catch(error => {
+        console.error(error.response)
+      })
     }
   }
