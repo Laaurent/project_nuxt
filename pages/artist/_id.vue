@@ -8,8 +8,8 @@
             class="artist_avatar"
             :style="
               'background-image: url(' +
-                artist.avatar +
-                '), linear-gradient(#fefff8 50%, #140c3d) '
+              artist.avatar +
+              '), linear-gradient(#fefff8 50%, #140c3d) '
             "
           ></div>
           <div class="artist_info">
@@ -39,6 +39,10 @@
                 j'aime
                 <i class="far fa-heart"></i>
               </button>
+              <button @click="toggleModale()">
+                éditer
+                <i class="fas fa-pen"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -55,40 +59,53 @@
         </div>
       </div>
     </div>
+    <ArtistModale
+      v-if="showModale"
+      :artistInfo="artist"
+      @closemodale="toggleModale()"
+      @update="updateInfo($event)"
+    />
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import BadgeComponent from "../../components/BadgeComponent.vue";
+import ArtistModale from "../../components/ArtistModale.vue";
 import AlbumsPreviewComponent from "../../components/AlbumsPreviewComponent.vue";
 import ConcertsComponent from "../../components/ConcertsComponent.vue";
 export default {
-  components: { BadgeComponent, AlbumsPreviewComponent, ConcertsComponent },
+  components: {
+    BadgeComponent,
+    AlbumsPreviewComponent,
+    ConcertsComponent,
+    ArtistModale,
+  },
   data() {
     return {
-      artist: {}
+      artist: {},
+      showModale: false,
     };
   },
   mounted() {
     axios
       .get(`http://localhost:3000/artists?id=${this.$nuxt.$route.params.id}`)
-      .then(response => response.data[0])
-      .then(respArtist => {
+      .then((response) => response.data[0])
+      .then((respArtist) => {
         //GENRES
         let reqGenres = axios
           .get(
             `http://localhost:3000/genres?id=${respArtist.genreId.join("&id=")}`
           )
-          .then(respGenre => respGenre.data.map(genre => genre.name))
-          .then(respGenreData => {
+          .then((respGenre) => respGenre.data.map((genre) => genre.name))
+          .then((respGenreData) => {
             respArtist.genres = respGenreData;
           });
         //CONCERTS
         let reqConcerts = axios
           .get(`http://localhost:3000/concerts?artistId=${respArtist.id}`)
-          .then(respConcert => {
-            respConcert.data.forEach(element => {
+          .then((respConcert) => {
+            respConcert.data.forEach((element) => {
               let date = element.dates.split("/");
               let formated = new Date(date[2], date[1] - 1, date[0]);
               element.dates = formated;
@@ -98,15 +115,23 @@ export default {
         //ALBUMS
         let reqAlbums = axios
           .get(`http://localhost:3000/albums?artistId=${respArtist.id}`)
-          .then(respAlbums => {
+          .then((respAlbums) => {
             respArtist.albums = respAlbums.data;
           });
 
-        Promise.all([reqGenres, reqConcerts, reqAlbums]).then(response => {
+        Promise.all([reqGenres, reqConcerts, reqAlbums]).then((response) => {
           this.artist = respArtist;
         });
       });
-  }
+  },
+  methods: {
+    toggleModale() {
+      this.showModale = !this.showModale;
+    },
+    updateInfo($event) {
+      console.log($event);
+    },
+  },
 };
 </script>
 
