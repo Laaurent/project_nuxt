@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "server": "json-server ./server/db.json -m ./node_modules/json-server-auth -r ./server/routes.json",
+    "server": "json-server --watch ./server/db.json -m ./node_modules/json-server-auth -r ./server/routes.json",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
