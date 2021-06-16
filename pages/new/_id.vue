@@ -9,8 +9,16 @@
           <h1>{{ new_item.title}}</h1>
           <p id="content">{{ new_item.content }}</p>
           <p id="published">{{new_item.published}}</p>
+          <div class="news_button">
+          <button>
+            j'aime
+            <i class="far fa-heart"></i>
+          </button>
         </div>
+        </div>
+         
     </div>
+   
   </div>
   </div>
 </template>
