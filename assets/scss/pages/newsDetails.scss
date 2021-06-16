@@ -1,5 +1,12 @@
-.details_wrapper{
+.details_news_wrapper{
     display: flex;
+        padding: 32px;
+    /* width: 100%; */
+    height: 48vh;
+    height: auto;
+    /*  position: absolute; */
+    background-color: rgba($input_color, 0.4);
+    margin-top: 160px;
     img{
         object-fit: cover;
         width: 500px;

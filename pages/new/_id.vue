@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <div class="details_card" v-if="new_item">
-      <div class="details_wrapper">
+    <div class="details_news_card" v-if="new_item">
+      <div class="details_news_wrapper">
         <div>
           <img :src="new_item.img" alt="news_image">
         </div>
@@ -36,5 +36,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 </style>
