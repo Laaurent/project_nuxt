@@ -103,11 +103,13 @@
         <div class="avatarPreview">
           <div
             class="imgPreview"
-            style="background-image: url(https://pbs.twimg.com/profile_images/1371920923595571203/01PqaG-5_400x400.jpg);"
+            style="
+              background-image: url(https://pbs.twimg.com/profile_images/1371920923595571203/01PqaG-5_400x400.jpg);
+            "
           ></div>
         </div>
         <ul>
-          <li><NuxtLink to="/">Mon profil</NuxtLink></li>
+          <!-- <li><NuxtLink to="/profile">Mon profil</NuxtLink></li> -->
           <li><button class="" @click="logout()">Me déconnecter</button></li>
         </ul>
       </div>
@@ -124,10 +126,10 @@ export default {
   methods: {
     logout() {
       this.$store.commit("logout");
-    }
+    },
   },
   computed: {
-    ...mapGetters({ islogged: "getLog" })
-  }
+    ...mapGetters({ islogged: "getLog" }),
+  },
 };
 </script>

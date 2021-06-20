@@ -95,7 +95,7 @@
           <li class="title">&nbsp;</li>
           <li><NuxtLink to="/login">Se connecter</NuxtLink></li>
           <li><NuxtLink to="/register">S'inscrire</NuxtLink></li>
-          <li>Se deconnecter</li>
+          <li><a href="#" @click="logout()">Se deconnecter</a></li>
         </ul>
       </div>
     </div>
@@ -103,7 +103,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    logout() {
+      this.$store.commit("logout");
+    },
+  },
+};
 </script>
 
 <style></style>
