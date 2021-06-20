@@ -95,7 +95,14 @@
           <li class="title">&nbsp;</li>
           <li><NuxtLink to="/login">Se connecter</NuxtLink></li>
           <li><NuxtLink to="/register">S'inscrire</NuxtLink></li>
-          <li v-if="islogged" @click="logout()" style="cursor: pointer;" class="deco">Se deconnecter</li>
+          <li
+            v-if="islogged"
+            @click="logout()"
+            style="cursor: pointer"
+            class="deco"
+          >
+            Se deconnecter
+          </li>
         </ul>
       </div>
     </div>
@@ -105,19 +112,19 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-    methods: {
+  methods: {
     logout() {
       this.$store.commit("logout");
-    }
+    },
   },
   computed: {
-    ...mapGetters({islogged: 'getLog'})
-  }
+    ...mapGetters({ islogged: "getLog" }),
+  },
 };
 </script>
 
 <style>
-.deco:hover{
-  font-weight: bold;
-}
+  .deco:hover {
+    font-weight: bold;
+  }
 </style>

@@ -48,9 +48,15 @@
             }
           }
         }
-        button {
-          margin: 0;
+        .artist_interect{
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          button {
+            margin: 0;
+          }
         }
+        
       }
     }
     .details_main {
